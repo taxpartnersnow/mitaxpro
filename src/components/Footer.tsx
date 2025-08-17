@@ -1,50 +1,133 @@
-import { Facebook, Instagram, Twitter, Linkedin } from "lucide-react";
+import { Facebook, Instagram, Twitter, Linkedin, Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
   return (
-    <footer className="bg-secondary text-secondary-foreground py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          <div className="col-span-1 md:col-span-2">
-            <img 
-              src="/lovable-uploads/b115556c-f99f-4299-a39e-5e275d34c1bd.png" 
-              alt="Tax Partners Logo" 
-              className="h-10 w-auto mb-4 filter brightness-0 invert"
-            />
-            <p className="text-gray-300 mb-6 max-w-md">
+    <footer className="bg-gradient-hero text-white py-16 relative overflow-hidden">
+      {/* Background decorations */}
+      <div className="absolute inset-0">
+        <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary-glow/20 rounded-full blur-3xl animate-float" style={{animationDelay: '1.5s'}}></div>
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
+          {/* Logo y descripción */}
+          <div className="lg:col-span-2 animate-fade-in">
+            <div className="mb-8">
+              <img 
+                src="/lovable-uploads/b115556c-f99f-4299-a39e-5e275d34c1bd.png" 
+                alt="Tax Partners Logo" 
+                className="h-16 w-auto mb-6 filter brightness-0 invert hover:scale-105 transition-transform duration-300"
+              />
+              <h3 className="text-2xl font-bold text-primary-glow mb-4">TaxPartners</h3>
+            </div>
+            <p className="text-gray-200 mb-8 text-lg leading-relaxed max-w-md">
               Tu socio confiable en servicios fiscales y legales. Más de 10 años 
-              ayudando a la comunidad hispana en Estados Unidos.
+              ayudando a la comunidad hispana en Estados Unidos a alcanzar sus objetivos financieros.
             </p>
-            <div className="flex space-x-4">
-              <Facebook className="w-6 h-6 text-gray-400 hover:text-primary cursor-pointer transition-colors" />
-              <Instagram className="w-6 h-6 text-gray-400 hover:text-primary cursor-pointer transition-colors" />
-              <Twitter className="w-6 h-6 text-gray-400 hover:text-primary cursor-pointer transition-colors" />
-              <Linkedin className="w-6 h-6 text-gray-400 hover:text-primary cursor-pointer transition-colors" />
+            
+            {/* Social Media con animaciones */}
+            <div className="flex space-x-6">
+              {[
+                { icon: Facebook, label: "Facebook" },
+                { icon: Instagram, label: "Instagram" },
+                { icon: Twitter, label: "Twitter" },
+                { icon: Linkedin, label: "LinkedIn" }
+              ].map((social, index) => (
+                <div 
+                  key={index}
+                  className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 cursor-pointer group backdrop-blur-sm border border-white/20"
+                >
+                  <social.icon className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors duration-300" />
+                </div>
+              ))}
             </div>
           </div>
           
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Servicios</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li><a href="#" className="hover:text-primary transition-colors">Preparación de Impuestos</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Creación de LLC</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Reparación de Crédito</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">Servicios de Migración</a></li>
+          {/* Servicios */}
+          <div className="animate-slide-in-left">
+            <h4 className="text-xl font-bold mb-6 text-primary-glow">Nuestros Servicios</h4>
+            <ul className="space-y-4">
+              {[
+                "Preparación de Impuestos",
+                "Creación de LLC",
+                "Reparación de Crédito",
+                "Servicios de Migración",
+                "Consultoría Fiscal",
+                "Asesoría Legal"
+              ].map((service, index) => (
+                <li key={index}>
+                  <a 
+                    href="#" 
+                    className="text-gray-300 hover:text-primary-glow transition-all duration-300 flex items-center group"
+                  >
+                    <div className="w-2 h-2 bg-primary-glow rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></div>
+                    {service}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
           
-          <div>
-            <h4 className="text-lg font-semibold mb-4">Contacto</h4>
-            <ul className="space-y-2 text-gray-300">
-              <li>(555) 123-4567</li>
-              <li>info@taxpartners.com</li>
-              <li>123 Main Street<br />Miami, FL 33101</li>
-            </ul>
+          {/* Contacto */}
+          <div className="animate-slide-in-right">
+            <h4 className="text-xl font-bold mb-6 text-primary-glow">Contacto Directo</h4>
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4 group">
+                <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                  <Phone className="w-5 h-5 text-primary-glow group-hover:text-white" />
+                </div>
+                <div>
+                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">(555) 123-4567</p>
+                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">(555) 987-6543</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4 group">
+                <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                  <Mail className="w-5 h-5 text-primary-glow group-hover:text-white" />
+                </div>
+                <div>
+                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">info@taxpartners.com</p>
+                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">consultas@taxpartners.com</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start space-x-4 group">
+                <div className="w-10 h-10 bg-primary/20 rounded-lg flex items-center justify-center group-hover:bg-primary group-hover:scale-110 transition-all duration-300">
+                  <MapPin className="w-5 h-5 text-primary-glow group-hover:text-white" />
+                </div>
+                <div>
+                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">123 Main Street</p>
+                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">Miami, FL 33101</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
         
-        <div className="border-t border-gray-700 mt-12 pt-8 text-center text-gray-400">
-          <p>&copy; 2024 TaxPartners. Todos los derechos reservados.</p>
+        {/* Bottom section */}
+        <div className="border-t border-white/20 mt-16 pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+            <div className="text-gray-400 text-center md:text-left">
+              <p>&copy; 2024 TaxPartners. Todos los derechos reservados.</p>
+              <p className="text-sm mt-1">Licenciado y autorizado para operar en Estados Unidos</p>
+            </div>
+            
+            <div className="flex items-center space-x-6 text-sm text-gray-400">
+              <a href="#" className="hover:text-primary-glow transition-colors duration-300">
+                Política de Privacidad
+              </a>
+              <span>•</span>
+              <a href="#" className="hover:text-primary-glow transition-colors duration-300">
+                Términos de Servicio
+              </a>
+              <span>•</span>
+              <a href="#" className="hover:text-primary-glow transition-colors duration-300">
+                Aviso Legal
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

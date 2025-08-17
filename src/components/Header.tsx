@@ -1,34 +1,94 @@
 import { Button } from "@/components/ui/button";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-white/95 backdrop-blur-md shadow-xl sticky top-0 z-50 border-b border-primary/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
-          <div className="flex items-center">
+        <div className="flex justify-between items-center h-20">
+          <div className="flex items-center animate-fade-in">
             <img 
               src="/lovable-uploads/b115556c-f99f-4299-a39e-5e275d34c1bd.png" 
               alt="Tax Partners Logo" 
-              className="h-10 w-auto"
+              className="h-16 w-auto hover:scale-105 transition-transform duration-300"
             />
           </div>
           
-          <nav className="hidden md:flex space-x-8">
-            <a href="#services" className="text-foreground hover:text-primary transition-colors">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex space-x-8 animate-slide-in-right">
+            <a 
+              href="#services" 
+              className="text-foreground hover:text-primary transition-all duration-300 relative group font-medium text-lg"
+            >
               Servicios
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">
+            <a 
+              href="#about" 
+              className="text-foreground hover:text-primary transition-all duration-300 relative group font-medium text-lg"
+            >
               Nosotros
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-colors">
+            <a 
+              href="#contact" 
+              className="text-foreground hover:text-primary transition-all duration-300 relative group font-medium text-lg"
+            >
               Contacto
+              <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           </nav>
           
-          <Button variant="hero" size="sm">
-            Consulta Gratuita
-          </Button>
+          {/* Desktop CTA */}
+          <div className="hidden md:block animate-bounce-in">
+            <Button variant="premium" size="lg" className="text-lg">
+              Consulta Gratuita
+            </Button>
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden p-2 rounded-md text-foreground hover:text-primary transition-colors duration-300"
+          >
+            {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+          </button>
         </div>
+
+        {/* Mobile Navigation */}
+        {isMenuOpen && (
+          <div className="md:hidden py-4 border-t border-primary/10 animate-fade-in-up">
+            <div className="flex flex-col space-y-4">
+              <a 
+                href="#services" 
+                className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-lg py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Servicios
+              </a>
+              <a 
+                href="#about" 
+                className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-lg py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Nosotros
+              </a>
+              <a 
+                href="#contact" 
+                className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-lg py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Contacto
+              </a>
+              <Button variant="premium" size="lg" className="w-full mt-4">
+                Consulta Gratuita
+              </Button>
+            </div>
+          </div>
+        )}
       </div>
     </header>
   );
