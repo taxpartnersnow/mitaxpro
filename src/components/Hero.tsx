@@ -39,9 +39,9 @@ const Hero = () => {
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Tu declaración de renta{" "}
-              <span className="text-primary-glow">
-                lista cuando quieras
+              Servicios Fiscales y Legales{" "}
+              <span className="text-orange-500">
+                profesionales
               </span>
             </h1>
             
