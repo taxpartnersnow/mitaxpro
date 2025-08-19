@@ -4,7 +4,7 @@ const Hero = () => {
   return <section className="relative bg-gradient-hero text-white py-24 lg:py-32 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-10 right-10 w-96 h-72 animate-float">
+        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-72 animate-float">
           <img src="/src/assets/tax-consultation-hero.jpg" alt="Mujer recibiendo asesoría fiscal profesional" className="w-full h-full object-cover rounded-3xl shadow-2xl border-4 border-white/20" />
         </div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-glow/20 rounded-full blur-3xl animate-float" style={{
@@ -69,46 +69,6 @@ const Hero = () => {
             </div>
           </div>
           
-          <div className="relative animate-slide-in-right">
-            {/* Floating pricing card */}
-            <div className="relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 shadow-xl border border-white/20 hover:bg-white/15 transition-all duration-500 transform hover:scale-105">
-              {/* Logo prominente */}
-              <div className="text-center mb-8">
-                <img src="/lovable-uploads/b115556c-f99f-4299-a39e-5e275d34c1bd.png" alt="Tax Partners Logo" className="h-20 w-auto mx-auto mb-4 filter brightness-0 invert animate-pulse" />
-                <h3 className="text-3xl font-bold text-center mb-2">¡Obtén tu Cotización!</h3>
-                <p className="text-primary-glow text-lg">Precios transparentes y competitivos</p>
-              </div>
-              
-              <div className="space-y-4">
-                <div className="flex items-center justify-between py-4 px-6 bg-white/20 rounded-xl hover:bg-white/30 transition-all duration-300 transform hover:scale-105 group">
-                  <span className="font-medium text-lg">Preparación de Taxes</span>
-                  <span className="text-primary-glow font-bold text-xl group-hover:scale-110 transition-transform duration-300">Desde $50</span>
-                </div>
-                <div className="flex items-center justify-between py-4 px-6 bg-white/20 rounded-xl hover:bg-white/30 transition-all duration-300 transform hover:scale-105 group">
-                  <span className="font-medium text-lg">Creación de LLC</span>
-                  <span className="text-primary-glow font-bold text-xl group-hover:scale-110 transition-transform duration-300">Desde $199</span>
-                </div>
-                <div className="flex items-center justify-between py-4 px-6 bg-white/20 rounded-xl hover:bg-white/30 transition-all duration-300 transform hover:scale-105 group">
-                  <span className="font-medium text-lg">Reparación de Crédito</span>
-                  <span className="text-primary-glow font-bold text-xl group-hover:scale-110 transition-transform duration-300">Desde $99</span>
-                </div>
-                <div className="flex items-center justify-between py-4 px-6 bg-white/20 rounded-xl hover:bg-white/30 transition-all duration-300 transform hover:scale-105 group">
-                  <span className="font-medium text-lg">Servicios de Migración</span>
-                  <span className="text-primary-glow font-bold text-xl group-hover:scale-110 transition-transform duration-300">Consulta</span>
-                </div>
-              </div>
-
-              <Button variant="premium" size="lg" className="w-full mt-8 text-xl py-4">
-                ¡Solicita tu Consulta GRATIS!
-              </Button>
-            </div>
-
-            {/* Floating decoration elements */}
-            <div className="absolute -top-6 -right-6 w-12 h-12 bg-primary-glow rounded-full animate-bounce opacity-80"></div>
-            <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-primary rounded-full animate-bounce opacity-60" style={{
-            animationDelay: '0.5s'
-          }}></div>
-          </div>
         </div>
       </div>
     </section>;
