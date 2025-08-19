@@ -1,73 +1,41 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FileText, Building, CreditCard, Users, ArrowRight, Check } from "lucide-react";
-
-const services = [
-  {
-    icon: FileText,
-    title: "Preparación de Impuestos",
-    description: "Maximiza tu reembolso con nuestro servicio experto de preparación de taxes. Manejamos todo tipo de situaciones fiscales con precisión y cuidado.",
-    features: [
-      "Taxes personales y de negocio",
-      "Maximización de deducciones",
-      "Representación ante el IRS",
-      "E-filing incluido",
-      "Revisión gratuita"
-    ],
-    price: "Desde $50",
-    badge: "Más Popular",
-    gradient: "from-blue-500 to-purple-600"
-  },
-  {
-    icon: Building,
-    title: "Creación de LLC",
-    description: "Establece tu negocio de manera legal y protege tus activos personales con nuestro servicio completo de incorporación empresarial.",
-    features: [
-      "Registro en el estado",
-      "Número EIN federal",
-      "Operating Agreement",
-      "Asesoría legal incluida",
-      "Seguimiento completo"
-    ],
-    price: "Desde $199",
-    badge: "Recomendado",
-    gradient: "from-green-500 to-emerald-600"
-  },
-  {
-    icon: CreditCard,
-    title: "Reparación de Crédito",
-    description: "Mejora tu score crediticio y abre nuevas oportunidades financieras con nuestro programa personalizado y estratégico.",
-    features: [
-      "Análisis de reporte crediticio",
-      "Disputa de elementos negativos",
-      "Estrategias de mejora",
-      "Monitoreo continuo",
-      "Resultados garantizados"
-    ],
-    price: "Desde $99",
-    badge: "Efectivo",
-    gradient: "from-orange-500 to-red-600"
-  },
-  {
-    icon: Users,
-    title: "Servicios de Migración",
-    description: "Te acompañamos en tu proceso migratorio con asesoría experta y representación legal especializada en inmigración.",
-    features: [
-      "Asesoría migratoria completa",
-      "Preparación de documentos",
-      "Representación legal",
-      "Seguimiento de casos",
-      "Soporte 24/7"
-    ],
-    price: "Consulta gratuita",
-    badge: "Más Popular",
-    gradient: "from-purple-500 to-pink-600"
-  }
-];
-
+const services = [{
+  icon: FileText,
+  title: "Preparación de Impuestos",
+  description: "Maximiza tu reembolso con nuestro servicio experto de preparación de taxes. Manejamos todo tipo de situaciones fiscales con precisión y cuidado.",
+  features: ["Taxes personales y de negocio", "Maximización de deducciones", "Representación ante el IRS", "E-filing incluido", "Revisión gratuita"],
+  price: "Desde $50",
+  badge: "Más Popular",
+  gradient: "from-blue-500 to-purple-600"
+}, {
+  icon: Building,
+  title: "Creación de LLC",
+  description: "Establece tu negocio de manera legal y protege tus activos personales con nuestro servicio completo de incorporación empresarial.",
+  features: ["Registro en el estado", "Número EIN federal", "Operating Agreement", "Asesoría legal incluida", "Seguimiento completo"],
+  price: "Desde $199",
+  badge: "Recomendado",
+  gradient: "from-green-500 to-emerald-600"
+}, {
+  icon: CreditCard,
+  title: "Reparación de Crédito",
+  description: "Mejora tu score crediticio y abre nuevas oportunidades financieras con nuestro programa personalizado y estratégico.",
+  features: ["Análisis de reporte crediticio", "Disputa de elementos negativos", "Estrategias de mejora", "Monitoreo continuo", "Resultados garantizados"],
+  price: "Desde $99",
+  badge: "Efectivo",
+  gradient: "from-orange-500 to-red-600"
+}, {
+  icon: Users,
+  title: "Servicios de Migración",
+  description: "Te acompañamos en tu proceso migratorio con asesoría experta y representación legal especializada en inmigración.",
+  features: ["Asesoría migratoria completa", "Preparación de documentos", "Representación legal", "Seguimiento de casos", "Soporte 24/7"],
+  price: "Consulta gratuita",
+  badge: "Más Popular",
+  gradient: "from-purple-500 to-pink-600"
+}];
 const Services = () => {
-  return (
-    <section id="services" className="py-24 bg-gradient-overlay relative overflow-hidden">
+  return <section id="services" className="py-24 bg-gradient-overlay relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
@@ -82,19 +50,13 @@ const Services = () => {
           <h2 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
             Soluciones Completas
           </h2>
-          <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">
-            Ofrecemos servicios especializados para todas tus necesidades fiscales, legales y financieras 
-            con el respaldo de más de 10 años de experiencia
-          </p>
+          <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">Ofrecemos servicios especializados para todas tus necesidades fiscales, legales y financieras con el respaldo de más de 5 años de experiencia</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {services.map((service, index) => (
-            <Card 
-              key={index} 
-              className="relative bg-gradient-card border-0 shadow-xl hover:shadow-glow transition-all duration-700 hover:-translate-y-4 group overflow-hidden animate-scale-in"
-              style={{animationDelay: `${index * 0.2}s`}}
-            >
+          {services.map((service, index) => <Card key={index} className="relative bg-gradient-card border-0 shadow-xl hover:shadow-glow transition-all duration-700 hover:-translate-y-4 group overflow-hidden animate-scale-in" style={{
+          animationDelay: `${index * 0.2}s`
+        }}>
               {/* Badge */}
               <div className="absolute top-4 right-4 z-10">
                 <span className={`px-3 py-1 rounded-full text-xs font-bold text-white bg-gradient-to-r ${service.gradient}`}>
@@ -123,16 +85,14 @@ const Services = () => {
 
               <CardContent className="space-y-6 relative z-10">
                 <ul className="space-y-3">
-                  {service.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center text-sm group/item">
+                  {service.features.map((feature, idx) => <li key={idx} className="flex items-center text-sm group/item">
                       <div className="w-5 h-5 bg-primary rounded-full mr-3 flex items-center justify-center group-hover/item:scale-110 transition-transform duration-300">
                         <Check className="w-3 h-3 text-primary-foreground" />
                       </div>
                       <span className="group-hover/item:text-primary transition-colors duration-300">
                         {feature}
                       </span>
-                    </li>
-                  ))}
+                    </li>)}
                 </ul>
                 
                 <div className="pt-6 border-t border-border/50">
@@ -141,18 +101,13 @@ const Services = () => {
                       {service.price}
                     </span>
                   </div>
-                  <Button 
-                    className="w-full group/btn" 
-                    variant="default" 
-                    size="lg"
-                  >
+                  <Button className="w-full group/btn" variant="default" size="lg">
                     Más Información
                     <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
                   </Button>
                 </div>
               </CardContent>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Call to Action */}
@@ -168,8 +123,6 @@ const Services = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Services;
