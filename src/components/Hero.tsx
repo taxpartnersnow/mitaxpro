@@ -1,14 +1,16 @@
 import { Button } from "@/components/ui/button";
 import { CheckCircle, Star, ArrowRight, Shield } from "lucide-react";
-
 const Hero = () => {
-  return (
-    <section className="relative bg-gradient-hero text-white py-24 lg:py-32 overflow-hidden">
+  return <section className="relative bg-gradient-hero text-white py-24 lg:py-32 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-72 h-72 bg-primary/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-glow/20 rounded-full blur-3xl animate-float" style={{animationDelay: '1s'}}></div>
-        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" style={{animationDelay: '2s'}}></div>
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-glow/20 rounded-full blur-3xl animate-float" style={{
+        animationDelay: '1s'
+      }}></div>
+        <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-float" style={{
+        animationDelay: '2s'
+      }}></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -37,11 +39,7 @@ const Hero = () => {
               </span>
             </h1>
             
-            <p className="text-lg lg:text-xl mb-8 text-gray-300 leading-relaxed max-w-2xl">
-              Hazlo paso a paso con nuestra app o deja que un experto se 
-              encargue. Como elijas, tu declaración siempre cuenta con 
-              garantía.
-            </p>
+            <p className="text-lg lg:text-xl mb-8 text-gray-300 leading-relaxed max-w-2xl">Expertos en certificados en preparación de impuestos, creación de LLC, reparación de crédito y servicios de migración. Tu éxito financiero y legal es nuestra prioridad. </p>
             
             <div className="mb-10">
               <Button variant="premium" size="lg" className="text-lg px-8 py-4 group">
@@ -65,10 +63,7 @@ const Hero = () => {
                   <span className="text-white text-sm font-bold">+</span>
                 </div>
               </div>
-              <span className="text-gray-300">
-                Siempre estamos contigo: más de 300 asesores y expertos 
-                tributarios listos para ayudarte cuando lo necesites.
-              </span>
+              <span className="text-gray-300">Siempre estamos contigo: 5  asesores y expertos tributarios listos para ayudarte cuando lo necesites.</span>
             </div>
           </div>
           
@@ -77,11 +72,7 @@ const Hero = () => {
             <div className="relative bg-white/10 backdrop-blur-lg rounded-3xl p-8 shadow-xl border border-white/20 hover:bg-white/15 transition-all duration-500 transform hover:scale-105">
               {/* Logo prominente */}
               <div className="text-center mb-8">
-                <img 
-                  src="/lovable-uploads/b115556c-f99f-4299-a39e-5e275d34c1bd.png" 
-                  alt="Tax Partners Logo" 
-                  className="h-20 w-auto mx-auto mb-4 filter brightness-0 invert animate-pulse"
-                />
+                <img src="/lovable-uploads/b115556c-f99f-4299-a39e-5e275d34c1bd.png" alt="Tax Partners Logo" className="h-20 w-auto mx-auto mb-4 filter brightness-0 invert animate-pulse" />
                 <h3 className="text-3xl font-bold text-center mb-2">¡Obtén tu Cotización!</h3>
                 <p className="text-primary-glow text-lg">Precios transparentes y competitivos</p>
               </div>
@@ -112,12 +103,12 @@ const Hero = () => {
 
             {/* Floating decoration elements */}
             <div className="absolute -top-6 -right-6 w-12 h-12 bg-primary-glow rounded-full animate-bounce opacity-80"></div>
-            <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-primary rounded-full animate-bounce opacity-60" style={{animationDelay: '0.5s'}}></div>
+            <div className="absolute -bottom-4 -left-4 w-8 h-8 bg-primary rounded-full animate-bounce opacity-60" style={{
+            animationDelay: '0.5s'
+          }}></div>
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Hero;
