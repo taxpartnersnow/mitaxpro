@@ -1,12 +1,12 @@
 import { Facebook, Instagram, Twitter, Linkedin, Phone, Mail, MapPin } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-gradient-hero text-white py-16 relative overflow-hidden">
+  return <footer className="bg-gradient-hero text-white py-16 relative overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-64 h-64 bg-primary/20 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary-glow/20 rounded-full blur-3xl animate-float" style={{animationDelay: '1.5s'}}></div>
+        <div className="absolute bottom-0 left-0 w-80 h-80 bg-primary-glow/20 rounded-full blur-3xl animate-float" style={{
+        animationDelay: '1.5s'
+      }}></div>
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -14,33 +14,28 @@ const Footer = () => {
           {/* Logo y descripción */}
           <div className="lg:col-span-2 animate-fade-in">
             <div className="mb-8">
-              <img 
-                src="/lovable-uploads/b115556c-f99f-4299-a39e-5e275d34c1bd.png" 
-                alt="Tax Partners Logo" 
-                className="h-16 w-auto mb-6 filter brightness-0 invert hover:scale-105 transition-transform duration-300"
-              />
+              <img src="/lovable-uploads/b115556c-f99f-4299-a39e-5e275d34c1bd.png" alt="Tax Partners Logo" className="h-16 w-auto mb-6 filter brightness-0 invert hover:scale-105 transition-transform duration-300" />
               <h3 className="text-2xl font-bold text-primary-glow mb-4">TaxPartners</h3>
             </div>
-            <p className="text-gray-200 mb-8 text-lg leading-relaxed max-w-md">
-              Tu socio confiable en servicios fiscales y legales. Más de 10 años 
-              ayudando a la comunidad hispana en Estados Unidos a alcanzar sus objetivos financieros.
-            </p>
+            <p className="text-gray-200 mb-8 text-lg leading-relaxed max-w-md">Tu socio confiable en servicios fiscales y legales. Más de 5 años ayudando a la comunidad hispana en Estados Unidos a alcanzar sus objetivos financieros.</p>
             
             {/* Social Media con animaciones */}
             <div className="flex space-x-6">
-              {[
-                { icon: Facebook, label: "Facebook" },
-                { icon: Instagram, label: "Instagram" },
-                { icon: Twitter, label: "Twitter" },
-                { icon: Linkedin, label: "LinkedIn" }
-              ].map((social, index) => (
-                <div 
-                  key={index}
-                  className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 cursor-pointer group backdrop-blur-sm border border-white/20"
-                >
+              {[{
+              icon: Facebook,
+              label: "Facebook"
+            }, {
+              icon: Instagram,
+              label: "Instagram"
+            }, {
+              icon: Twitter,
+              label: "Twitter"
+            }, {
+              icon: Linkedin,
+              label: "LinkedIn"
+            }].map((social, index) => <div key={index} className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 cursor-pointer group backdrop-blur-sm border border-white/20">
                   <social.icon className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors duration-300" />
-                </div>
-              ))}
+                </div>)}
             </div>
           </div>
           
@@ -48,24 +43,12 @@ const Footer = () => {
           <div className="animate-slide-in-left">
             <h4 className="text-xl font-bold mb-6 text-primary-glow">Nuestros Servicios</h4>
             <ul className="space-y-4">
-              {[
-                "Preparación de Impuestos",
-                "Creación de LLC",
-                "Reparación de Crédito",
-                "Servicios de Migración",
-                "Consultoría Fiscal",
-                "Asesoría Legal"
-              ].map((service, index) => (
-                <li key={index}>
-                  <a 
-                    href="#" 
-                    className="text-gray-300 hover:text-primary-glow transition-all duration-300 flex items-center group"
-                  >
+              {["Preparación de Impuestos", "Creación de LLC", "Reparación de Crédito", "Servicios de Migración", "Consultoría Fiscal", "Asesoría Legal"].map((service, index) => <li key={index}>
+                  <a href="#" className="text-gray-300 hover:text-primary-glow transition-all duration-300 flex items-center group">
                     <div className="w-2 h-2 bg-primary-glow rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></div>
                     {service}
                   </a>
-                </li>
-              ))}
+                </li>)}
             </ul>
           </div>
           
@@ -130,8 +113,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
