@@ -36,7 +36,7 @@ const Hero = () => {
 
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Servicios Fiscales y Legales{" "}
-              <span className="text-orange-500">
+              <span className="text-primary-glow">
                 profesionales
               </span>
             </h1>
