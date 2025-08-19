@@ -15,62 +15,60 @@ const Hero = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="animate-slide-in-left">
             {/* Trust badges */}
-            <div className="flex items-center space-x-4 mb-6">
-              <div className="flex items-center space-x-1">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-primary-glow fill-current" />
-                ))}
+            <div className="flex items-center space-x-6 mb-8">
+              <div className="flex items-center space-x-2 px-4 py-2 bg-primary-glow/20 rounded-full border border-primary-glow/30">
+                <CheckCircle className="w-5 h-5 text-primary-glow" />
+                <span className="text-primary-glow font-medium">Garantía</span>
               </div>
-              <span className="text-primary-glow font-semibold">5,000+ Clientes Satisfechos</span>
+              <div className="flex items-center space-x-2 px-4 py-2 bg-primary-glow/20 rounded-full border border-primary-glow/30">
+                <Shield className="w-5 h-5 text-primary-glow" />
+                <span className="text-primary-glow font-medium">100% guiado</span>
+              </div>
+              <div className="flex items-center space-x-2 px-4 py-2 bg-primary-glow/20 rounded-full border border-primary-glow/30">
+                <Star className="w-5 h-5 text-primary-glow fill-current" />
+                <span className="text-primary-glow font-medium">Hoy mismo</span>
+              </div>
             </div>
 
-            <h1 className="text-5xl lg:text-7xl font-bold mb-6 leading-tight">
-              Servicios Fiscales{" "}
-              <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent animate-pulse">
-                Profesionales
+            <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              Tu declaración de renta{" "}
+              <span className="text-primary-glow">
+                lista cuando quieras
               </span>
             </h1>
             
-            <p className="text-xl lg:text-2xl mb-8 text-gray-200 leading-relaxed">
-              Expertos certificados en preparación de impuestos, creación de LLC, reparación de crédito 
-              y servicios de migración. <span className="text-primary-glow font-semibold">Tu éxito financiero es nuestra prioridad.</span>
+            <p className="text-lg lg:text-xl mb-8 text-gray-300 leading-relaxed max-w-2xl">
+              Hazlo paso a paso con nuestra app o deja que un experto se 
+              encargue. Como elijas, tu declaración siempre cuenta con 
+              garantía.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-6 mb-10">
-              <Button variant="premium" size="lg" className="text-xl px-10 py-4 group">
-                Comenzar Ahora
+            <div className="mb-10">
+              <Button variant="premium" size="lg" className="text-lg px-8 py-4 group">
+                Empezar mi declaración de renta
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-              </Button>
-              <Button variant="outline-white" size="lg" className="text-xl px-10 py-4">
-                Consulta Gratuita
               </Button>
             </div>
             
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div className="flex items-center space-x-3 group">
-                <div className="w-8 h-8 bg-primary-glow rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <CheckCircle className="w-5 h-5 text-white" />
+            <div className="flex items-center space-x-4">
+              <div className="flex -space-x-2">
+                <div className="w-10 h-10 bg-primary-glow rounded-full border-2 border-white flex items-center justify-center">
+                  <span className="text-white text-sm font-bold">TP</span>
                 </div>
-                <span className="text-lg">+10 años de experiencia</span>
-              </div>
-              <div className="flex items-center space-x-3 group">
-                <div className="w-8 h-8 bg-primary-glow rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <Shield className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 bg-primary rounded-full border-2 border-white flex items-center justify-center">
+                  <span className="text-white text-sm font-bold">TX</span>
                 </div>
-                <span className="text-lg">100% Confidencial</span>
-              </div>
-              <div className="flex items-center space-x-3 group">
-                <div className="w-8 h-8 bg-primary-glow rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <CheckCircle className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 bg-secondary rounded-full border-2 border-white flex items-center justify-center">
+                  <span className="text-white text-sm font-bold">PR</span>
                 </div>
-                <span className="text-lg">Atención en español</span>
-              </div>
-              <div className="flex items-center space-x-3 group">
-                <div className="w-8 h-8 bg-primary-glow rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                  <CheckCircle className="w-5 h-5 text-white" />
+                <div className="w-10 h-10 bg-primary-glow/80 rounded-full border-2 border-white flex items-center justify-center">
+                  <span className="text-white text-sm font-bold">+</span>
                 </div>
-                <span className="text-lg">Garantía total</span>
               </div>
+              <span className="text-gray-300">
+                Siempre estamos contigo: más de 300 asesores y expertos 
+                tributarios listos para ayudarte cuando lo necesites.
+              </span>
             </div>
           </div>
           
