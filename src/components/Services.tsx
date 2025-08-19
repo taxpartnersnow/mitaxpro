@@ -60,7 +60,7 @@ const services = [
       "Soporte 24/7"
     ],
     price: "Consulta gratuita",
-    badge: "Profesional",
+    badge: "Más Popular",
     gradient: "from-purple-500 to-pink-600"
   }
 ];
