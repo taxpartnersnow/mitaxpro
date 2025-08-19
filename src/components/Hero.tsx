@@ -65,7 +65,9 @@ const Hero = () => {
                   <span className="text-white text-sm font-bold">+</span>
                 </div>
               </div>
-              <span className="text-gray-300">Siempre estamos contigo: 5  asesores y expertos tributarios listos para ayudarte cuando lo necesites.</span>
+              <span className="text-gray-300">Siempre estamos contigo: 5  asesores y 
+expertos tributarios listos para ayudarte 
+cuando lo necesites.</span>
             </div>
           </div>
           
