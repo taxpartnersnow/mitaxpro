@@ -41,7 +41,7 @@ const Hero = () => {
               </span>
             </h1>
             
-            <p className="text-lg lg:text-xl mb-8 leading-relaxed max-w-2xl text-zinc-200">Expertos en certificados en preparación de impuestos, creación de LLC, reparación de crédito y servicios de migración. Tu éxito financiero y legal es nuestra prioridad. </p>
+            <p className="text-lg lg:text-xl mb-8 leading-relaxed max-w-2xl text-zinc-200">Expertos en preparación de impuestos, creación de LLC, reparación de crédito y servicios de migración. Tu éxito financiero y legal es nuestra prioridad. </p>
             
             <div className="mb-10">
               <Button variant="premium" size="lg" className="text-lg px-8 py-4 group">
