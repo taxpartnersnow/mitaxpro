@@ -4,7 +4,7 @@ import { Award, Users, Clock, Shield, CheckCircle, Star } from "lucide-react";
 const stats = [
   {
     icon: Users,
-    number: "5,000+",
+    number: "+1,500",
     label: "Clientes Satisfechos",
     gradient: "from-blue-500 to-cyan-500"
   },
