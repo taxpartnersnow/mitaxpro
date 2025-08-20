@@ -83,7 +83,7 @@ const Footer = () => {
                 </div>
                 <div>
                   <p className="text-gray-300 group-hover:text-white transition-colors duration-300">488 Onderdonk bridgewood</p>
-                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">Stado New, NY 11385</p>
+                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">488 Onderdonk Ridgewood</p>
                 </div>
               </div>
             </div>
