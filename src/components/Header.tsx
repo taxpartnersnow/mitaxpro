@@ -13,7 +13,7 @@ const Header = () => {
             <img 
               src="/lovable-uploads/7d0d4420-cdc2-418b-8c10-04d8a24306d7.png" 
               alt="Tax Partners Logo" 
-              className="h-20 w-auto hover:scale-105 transition-transform duration-300"
+              className="h-28 w-auto hover:scale-105 transition-transform duration-300"
             />
           </div>
           
