@@ -4,9 +4,6 @@ const Hero = () => {
   return <section className="relative bg-gradient-hero text-white py-24 lg:py-32 overflow-hidden">
       {/* Animated background elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[500px] h-[400px] animate-float flex items-center justify-center">
-          <img src="/src/assets/tax-consultation-hero.jpg" alt="Mujer recibiendo asesoría fiscal profesional" className="w-full h-full object-cover rounded-3xl shadow-2xl border-4 border-white/20" />
-        </div>
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-glow/20 rounded-full blur-3xl animate-float" style={{
         animationDelay: '1s'
       }}></div>
