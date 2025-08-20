@@ -26,7 +26,7 @@ const Hero = () => {
               </div>
               <div className="flex items-center space-x-2 px-4 py-2 bg-primary-glow/20 rounded-full border border-primary-glow/30">
                 <Shield className="w-5 h-5 text-primary-glow" />
-                <span className="text-primary-glow font-medium">100% guiado</span>
+                <span className="text-primary-glow font-medium">100% seguro</span>
               </div>
               <div className="flex items-center space-x-2 px-4 py-2 bg-primary-glow/20 rounded-full border border-primary-glow/30">
                 <Star className="w-5 h-5 text-primary-glow fill-current" />
