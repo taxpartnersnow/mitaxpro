@@ -71,8 +71,9 @@ const Footer = () => {
                   <Mail className="w-5 h-5 text-primary-glow group-hover:text-white" />
                 </div>
                 <div>
-                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">info@taxpartners.com</p>
-                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">consultas@taxpartners.com</p>
+                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">taxpartnersnow@gmail.com</p>
+                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">
+                </p>
                 </div>
               </div>
               
@@ -81,8 +82,8 @@ const Footer = () => {
                   <MapPin className="w-5 h-5 text-primary-glow group-hover:text-white" />
                 </div>
                 <div>
-                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">123 Main Street</p>
-                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">Miami, FL 33101</p>
+                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">488 Onderdonk bridgewood</p>
+                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">Stado New, NY 11385</p>
                 </div>
               </div>
             </div>
