@@ -11,9 +11,9 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center animate-fade-in">
             <img 
-              src="/lovable-uploads/b115556c-f99f-4299-a39e-5e275d34c1bd.png" 
+              src="/lovable-uploads/7d0d4420-cdc2-418b-8c10-04d8a24306d7.png" 
               alt="Tax Partners Logo" 
-              className="h-16 w-auto hover:scale-105 transition-transform duration-300"
+              className="h-20 w-auto hover:scale-105 transition-transform duration-300"
             />
           </div>
           
