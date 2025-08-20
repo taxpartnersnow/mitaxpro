@@ -62,7 +62,7 @@ const Contact = () => {
               {/* Logo en el formulario */}
               <div className="bg-gradient-primary p-6 text-center">
                 <img 
-                  src="/lovable-uploads/b115556c-f99f-4299-a39e-5e275d34c1bd.png" 
+                  src="/lovable-uploads/7d0d4420-cdc2-418b-8c10-04d8a24306d7.png" 
                   alt="Tax Partners Logo" 
                   className="h-16 w-auto mx-auto mb-4 filter brightness-0 invert"
                 />
