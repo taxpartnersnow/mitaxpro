@@ -10,7 +10,7 @@ const stats = [
   },
   {
     icon: Clock,
-    number: "10+",
+    number: "5",
     label: "Años de Experiencia",
     gradient: "from-purple-500 to-pink-500"
   },
