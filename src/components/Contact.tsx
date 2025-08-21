@@ -20,7 +20,7 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Dirección",
-    details: ["123 Main Street", "Miami, FL 33101"],
+    details: ["488 Onderdonk Ridgewood NY 11385"],
     gradient: "from-green-500 to-emerald-500"
   },
   {
