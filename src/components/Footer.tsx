@@ -45,8 +45,8 @@ const Footer = () => {
           <div className="animate-slide-in-left">
             <h4 className="text-xl font-bold mb-6 text-primary-glow">Nuestros Servicios</h4>
             <ul className="space-y-4">
-              {["Preparación de Impuestos", "Creación de LLC", "Reparación de Crédito", "Servicios de Migración", "Consultoría Fiscal", "Asesoría Legal"].map((service, index) => <li key={index}>
-                  <a href="#" className="text-gray-300 hover:text-primary-glow transition-all duration-300 flex items-center group">
+              {["Preparación de Impuestos", "Creación de LLC", "Reparación de Crédito", "Servicios de Migración"].map((service, index) => <li key={index}>
+                  <a href="#servicios" className="text-gray-300 hover:text-primary-glow transition-all duration-300 flex items-center group">
                     <div className="w-2 h-2 bg-primary-glow rounded-full mr-3 group-hover:scale-150 transition-transform duration-300"></div>
                     {service}
                   </a>
