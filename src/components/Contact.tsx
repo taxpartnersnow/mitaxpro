@@ -14,7 +14,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: ["info@taxpartners.com", "consultas@taxpartners.com"],
+    details: ["taxpartnersnow@gmail.com"],
     gradient: "from-purple-500 to-pink-500"
   },
   {
