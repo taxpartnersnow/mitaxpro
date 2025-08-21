@@ -82,8 +82,7 @@ const Footer = () => {
                   <MapPin className="w-5 h-5 text-primary-glow group-hover:text-white" />
                 </div>
                 <div>
-                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">488 Onderdonk bridgewood</p>
-                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">488 Onderdonk Ridgewood</p>
+                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">488 Onderdonk Ridgewood NY 11385</p>
                 </div>
               </div>
             </div>
