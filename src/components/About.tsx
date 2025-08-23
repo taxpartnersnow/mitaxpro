@@ -1,5 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Award, Users, Clock, Shield, CheckCircle, Star } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
+import { useState, useEffect } from "react";
 
 const stats = [
   {
@@ -51,7 +54,62 @@ const benefits = [
   }
 ];
 
+const testimonials = [
+  {
+    name: "María Contreras",
+    initials: "MC",
+    comment: "TaxPartners me ayudó con mis taxes y la creación de mi LLC. El servicio fue excepcional y muy profesional. ¡Totalmente recomendado!",
+    rating: 5
+  },
+  {
+    name: "José Hernández", 
+    initials: "JH",
+    comment: "Excelente atención al cliente. Me ayudaron a resolver problemas con el IRS que tenía pendientes desde hace años. Muy agradecido.",
+    rating: 5
+  },
+  {
+    name: "Ana López",
+    initials: "AL", 
+    comment: "Profesionales, puntuales y transparentes con los precios. Me guiaron en todo el proceso de declaración de impuestos sin complicaciones.",
+    rating: 5
+  },
+  {
+    name: "Carlos Rivera",
+    initials: "CR",
+    comment: "Los recomiendo al 100%. Me ayudaron a ahorrar una cantidad significativa en mis impuestos y el trato fue excepcional.",
+    rating: 5
+  },
+  {
+    name: "Sofia Martinez",
+    initials: "SM",
+    comment: "Gracias a TaxPartners pude regularizar mi situación fiscal. Su equipo es muy conocedor y me brindaron la confianza que necesitaba.",
+    rating: 5
+  }
+];
+
 const About = () => {
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [carouselApi, setCarouselApi] = useState<any>(null);
+
+  useEffect(() => {
+    if (!carouselApi) return;
+
+    const onSelect = () => {
+      setCurrentTestimonial(carouselApi.selectedScrollSnap());
+    };
+
+    carouselApi.on("select", onSelect);
+    
+    return () => {
+      carouselApi.off("select", onSelect);
+    };
+  }, [carouselApi]);
+
+  const scrollToSlide = (index: number) => {
+    if (carouselApi) {
+      carouselApi.scrollTo(index);
+    }
+  };
   return (
     <section id="about" className="py-24 bg-gradient-to-br from-accent via-background to-accent relative overflow-hidden">
       {/* Background decorations */}
@@ -152,25 +210,62 @@ const About = () => {
               ))}
             </div>
 
-            {/* Testimonial preview */}
-            <div className="mt-12 bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-primary/20 hover:shadow-glow transition-all duration-500">
-              <div className="flex items-center space-x-4 mb-4">
-                <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
-                  <span className="text-primary-foreground font-bold">MC</span>
+            {/* Testimonials carousel */}
+            <div className="mt-12">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                plugins={[
+                  Autoplay({
+                    delay: 4000,
+                  }),
+                ]}
+                setApi={setCarouselApi}
+                className="w-full"
+              >
+                <CarouselContent>
+                  {testimonials.map((testimonial, index) => (
+                    <CarouselItem key={index}>
+                      <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-primary/20 hover:shadow-glow transition-all duration-500">
+                        <div className="flex items-center space-x-4 mb-4">
+                          <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
+                            <span className="text-primary-foreground font-bold">{testimonial.initials}</span>
+                          </div>
+                          <div>
+                            <h4 className="font-bold">{testimonial.name}</h4>
+                            <div className="flex space-x-1">
+                              {[...Array(testimonial.rating)].map((_, i) => (
+                                <Star key={i} className="w-4 h-4 text-primary-glow fill-current" />
+                              ))}
+                            </div>
+                          </div>
+                        </div>
+                        <p className="text-muted-foreground italic">
+                          "{testimonial.comment}"
+                        </p>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                
+                {/* Navigation dots */}
+                <div className="flex justify-center space-x-2 mt-6">
+                  {testimonials.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => scrollToSlide(index)}
+                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                        index === currentTestimonial 
+                          ? 'bg-primary scale-125' 
+                          : 'bg-primary/30 hover:bg-primary/60'
+                      }`}
+                      aria-label={`Ir al testimonio ${index + 1}`}
+                    />
+                  ))}
                 </div>
-                <div>
-                  <h4 className="font-bold">María Contreras</h4>
-                  <div className="flex space-x-1">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-4 h-4 text-primary-glow fill-current" />
-                    ))}
-                  </div>
-                </div>
-              </div>
-              <p className="text-muted-foreground italic">
-                "TaxPartners me ayudó con mis taxes y la creación de mi LLC. 
-                El servicio fue excepcional y muy profesional. ¡Totalmente recomendado!"
-              </p>
+              </Carousel>
             </div>
           </div>
         </div>
