@@ -61,7 +61,7 @@ const Contact = () => {
             <Card className="bg-gradient-card border-0 shadow-xl hover:shadow-glow transition-all duration-500 overflow-hidden">
               {/* Logo en el formulario */}
               <div className="bg-gradient-primary p-6 text-center">
-                <h2 className="text-2xl font-bold mx-auto mb-4 text-primary-foreground">
+                <h2 className="text-2xl font-bold mx-auto mb-4 text-black">
                   Tax Partners
                 </h2>
                 <h3 className="text-2xl font-bold text-primary-foreground">¡Contáctanos Ahora!</h3>
