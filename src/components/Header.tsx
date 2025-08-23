@@ -45,7 +45,7 @@ const Header = () => {
           {/* Desktop CTA */}
           <div className="hidden md:block animate-bounce-in">
             <Button variant="premium" size="lg" className="text-lg">
-              Consulta Gratuita
+              Agenda tu cita gratis aquí
             </Button>
           </div>
 
@@ -84,7 +84,7 @@ const Header = () => {
                 Contacto
               </a>
               <Button variant="premium" size="lg" className="w-full mt-4">
-                Consulta Gratuita
+                Agenda tu cita gratis aquí
               </Button>
             </div>
           </div>
