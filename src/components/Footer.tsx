@@ -15,7 +15,7 @@ const Footer = () => {
           {/* Logo y descripción */}
           <div className="lg:col-span-2 animate-fade-in">
             <div className="mb-8">
-              <img src="/lovable-uploads/b115556c-f99f-4299-a39e-5e275d34c1bd.png" alt="Tax Partners Logo" className="h-16 w-auto mb-6 filter brightness-0 invert hover:scale-105 transition-transform duration-300" />
+              
               <h3 className="text-2xl font-bold text-primary-glow mb-4">TaxPartners</h3>
             </div>
             <p className="text-gray-200 mb-8 text-lg leading-relaxed max-w-md">Tu socio confiable en servicios fiscales y legales. Más de 5 años ayudando a la comunidad hispana en Estados Unidos a alcanzar sus objetivos financieros.</p>
