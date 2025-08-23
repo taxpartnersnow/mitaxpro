@@ -170,28 +170,6 @@ const Contact = () => {
               </div>
             </div>
             
-            {/* Emergency Contact Card */}
-            <Card className="bg-gradient-primary text-primary-foreground border-0 shadow-glow hover:shadow-xl transition-all duration-500 transform hover:scale-105 overflow-hidden">
-              <div className="absolute inset-0 bg-white/10 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-              <CardContent className="p-8 relative z-10">
-                <div className="text-center mb-6">
-                  <MessageCircle className="w-12 h-12 mx-auto mb-4 animate-bounce" />
-                  <h4 className="text-2xl font-bold mb-2">¿Necesitas Ayuda Urgente?</h4>
-                  <p className="text-primary-foreground/90 text-lg">
-                    Para casos urgentes o consultas fuera del horario regular, 
-                    contáctanos por WhatsApp las 24 horas.
-                  </p>
-                </div>
-                <Button 
-                  variant="outline-white" 
-                  size="lg" 
-                  className="w-full text-lg py-4 group"
-                >
-                  <MessageCircle className="w-5 h-5 mr-3 group-hover:scale-110 transition-transform duration-300" />
-                  WhatsApp: (555) 999-8888
-                </Button>
-              </CardContent>
-            </Card>
 
             {/* Additional CTA */}
             <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-primary/20 text-center">
