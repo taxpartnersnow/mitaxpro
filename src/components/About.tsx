@@ -219,7 +219,7 @@ const About = () => {
                 }}
                 plugins={[
                   Autoplay({
-                    delay: 4000,
+                    delay: 7000,
                   }),
                 ]}
                 setApi={setCarouselApi}
