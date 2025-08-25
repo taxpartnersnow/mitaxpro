@@ -167,9 +167,6 @@ const About = () => {
               ))}
             </div>
             
-            <Button variant="premium" size="lg" className="text-xl px-12 py-4">
-              Agenda tu Consulta Gratuita
-            </Button>
           </div>
           
           <div className="animate-slide-in-right">
