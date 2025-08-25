@@ -46,7 +46,7 @@ const Header = () => {
           <div className="hidden md:block animate-bounce-in">
             <a href="https://cal.com/diego-8oyx2o/15min" target="_blank" rel="noopener noreferrer">
               <Button variant="premium" size="lg" className="text-lg">
-                Agenda tu cita gratis aquí
+                Agenda tu consulta gratuita aquí
               </Button>
             </a>
           </div>
@@ -87,7 +87,7 @@ const Header = () => {
               </a>
               <a href="https://cal.com/diego-8oyx2o/15min" target="_blank" rel="noopener noreferrer" className="w-full">
                 <Button variant="premium" size="lg" className="w-full mt-4">
-                  Agenda tu cita gratis aquí
+                  Agenda tu consulta gratuita aquí
                 </Button>
               </a>
             </div>
