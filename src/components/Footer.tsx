@@ -1,5 +1,5 @@
 import { Facebook, Instagram, Phone, Mail, MapPin } from "lucide-react";
-import tiktokLogo from "@/assets/tiktok-logo.png";
+import tiktokLogo from "@/assets/tiktok-original.svg";
 const Footer = () => {
   return <footer className="bg-gradient-hero text-white py-16 relative overflow-hidden">
       {/* Background decorations */}
@@ -36,7 +36,7 @@ const Footer = () => {
               
               {/* TikTok with custom logo */}
               <a href="#" target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 cursor-pointer group backdrop-blur-sm border border-white/20">
-                <img src={tiktokLogo} alt="TikTok" className="w-6 h-6 filter brightness-0 invert group-hover:brightness-100 group-hover:invert-0 transition-all duration-300" />
+                <img src={tiktokLogo} alt="TikTok" className="w-6 h-6 group-hover:scale-110 transition-all duration-300" />
               </a>
             </div>
           </div>
