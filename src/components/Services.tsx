@@ -101,10 +101,6 @@ const Services = () => {
                       {service.price}
                     </span>
                   </div>
-                  <Button className="w-full group/btn" variant="default" size="lg">
-                    Más Información
-                    <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform duration-300" />
-                  </Button>
                 </div>
               </CardContent>
             </Card>)}
