@@ -18,14 +18,6 @@ const services = [{
   badge: "Recomendado",
   gradient: "from-green-500 to-emerald-600"
 }, {
-  icon: CreditCard,
-  title: "Reparación de Crédito",
-  description: "Mejora tu score crediticio y abre nuevas oportunidades financieras con nuestro programa personalizado y estratégico.",
-  features: ["Análisis de reporte crediticio", "Disputa de elementos negativos", "Estrategias de mejora", "Monitoreo continuo", "Resultados garantizados"],
-  price: "Desde $99",
-  badge: "Efectivo",
-  gradient: "from-orange-500 to-red-600"
-}, {
   icon: Users,
   title: "Servicios de Migración",
   description: "Te acompañamos en tu proceso migratorio con asesoría experta y representación legal especializada en inmigración.",
@@ -53,7 +45,7 @@ const Services = () => {
           <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto leading-relaxed">Ofrecemos servicios especializados para todas tus necesidades fiscales, legales y financieras con el respaldo de más de 5 años de experiencia</p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => <Card key={index} className="relative bg-gradient-card border-0 shadow-xl hover:shadow-glow transition-all duration-700 hover:-translate-y-4 group overflow-hidden animate-scale-in" style={{
           animationDelay: `${index * 0.2}s`
         }}>
@@ -100,6 +92,11 @@ const Services = () => {
                     <span className="text-3xl font-bold bg-gradient-primary bg-clip-text text-transparent">
                       {service.price}
                     </span>
+                  </div>
+                  <div className="text-center">
+                    <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                      Comunícate con un asesor para más información
+                    </Button>
                   </div>
                 </div>
               </CardContent>
