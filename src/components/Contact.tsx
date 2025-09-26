@@ -109,7 +109,6 @@ const Contact = () => {
                     <option>Selecciona un servicio</option>
                     <option>Preparación de Impuestos</option>
                     <option>Creación de LLC</option>
-                    <option>Reparación de Crédito</option>
                     <option>Servicios de Migración</option>
                   </select>
                 </div>
