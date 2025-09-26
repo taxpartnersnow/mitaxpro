@@ -6,7 +6,7 @@ const services = [{
   title: "Preparación de Impuestos",
   description: "Maximiza tu reembolso con nuestro servicio experto de preparación de taxes. Manejamos todo tipo de situaciones fiscales con precisión y cuidado.",
   features: ["Taxes personales y de negocio", "Maximización de deducciones", "Representación ante el IRS", "E-filing incluido", "Revisión gratuita"],
-  price: "Desde $50",
+  price: "Consulta gratuita",
   badge: "Más Popular",
   gradient: "from-blue-500 to-purple-600"
 }, {
@@ -14,7 +14,7 @@ const services = [{
   title: "Creación de LLC",
   description: "Establece tu negocio de manera legal y protege tus activos personales con nuestro servicio completo de incorporación empresarial.",
   features: ["Registro en el estado", "Número EIN federal", "Operating Agreement", "Asesoría legal incluida", "Seguimiento completo"],
-  price: "Desde $199",
+  price: "Consulta gratuita",
   badge: "Recomendado",
   gradient: "from-green-500 to-emerald-600"
 }, {
