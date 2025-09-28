@@ -14,7 +14,7 @@ const Header = () => {
             <img 
               src={mitaxProLogo} 
               alt="MiTax Pro Logo" 
-              className="h-28 w-28 object-contain hover:scale-105 transition-transform duration-300 mix-blend-multiply"
+              className="h-28 w-20 object-contain hover:scale-105 transition-transform duration-300 mix-blend-multiply"
             />
           </div>
           
