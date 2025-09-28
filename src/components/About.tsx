@@ -109,7 +109,7 @@ const About = () => {
             <h2 className="text-5xl lg:text-6xl font-bold mb-8 leading-tight">
               ¿Por qué elegir{" "}
               <span className="bg-gradient-primary bg-clip-text text-transparent">
-                TaxPartners?
+                MiTax Pro?
               </span>
             </h2>
             
