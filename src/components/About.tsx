@@ -3,6 +3,7 @@ import { Award, Users, Clock, Shield, CheckCircle, Star } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel";
 import Autoplay from "embla-carousel-autoplay";
 import { useState, useEffect } from "react";
+import mitaxProLogoNew from "@/assets/mitax-pro-logo-new.png";
 
 const stats = [
   {
@@ -173,8 +174,8 @@ const About = () => {
             {/* Logo prominente */}
             <div className="text-center mb-12">
               <img 
-                src="/lovable-uploads/7d0d4420-cdc2-418b-8c10-04d8a24306d7.png" 
-                alt="Tax Partners Logo" 
+                src={mitaxProLogoNew} 
+                alt="MiTax Pro Logo" 
                 className="h-32 w-auto mx-auto hover:scale-105 transition-transform duration-500 animate-float"
               />
               <h3 className="text-2xl font-bold mt-4 text-primary">TaxPartners</h3>
