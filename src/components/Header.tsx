@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import mitaxProLogo from "@/assets/mitax-pro-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,8 +12,8 @@ const Header = () => {
         <div className="flex justify-between items-center h-20">
           <div className="flex items-center animate-fade-in">
             <img 
-              src="/lovable-uploads/7d0d4420-cdc2-418b-8c10-04d8a24306d7.png" 
-              alt="Tax Partners Logo" 
+              src={mitaxProLogo} 
+              alt="MiTax Pro Logo" 
               className="h-28 w-auto hover:scale-105 transition-transform duration-300"
             />
           </div>
