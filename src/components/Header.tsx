@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import mitaxProLogo from "@/assets/mitax-pro-logo.png";
+import mitaxProLogo from "@/assets/mitax-pro-logo-v2.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
