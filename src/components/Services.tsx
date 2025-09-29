@@ -110,9 +110,14 @@ const Services = () => {
             <p className="text-xl text-muted-foreground mb-8">
               Nuestros expertos te ayudarán a encontrar la solución perfecta para tu situación
             </p>
-            <Button variant="premium" size="lg" className="text-xl px-12 py-4">
-              Agenda tu consulta gratuita aquí
-            </Button>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="premium" size="lg" className="text-xl px-12 py-4">
+                Agenda tu consulta gratuita aquí
+              </Button>
+              <Button variant="outline" size="lg" className="text-xl px-12 py-4 hover:bg-primary hover:text-primary-foreground">
+                Contáctanos
+              </Button>
+            </div>
           </div>
         </div>
       </div>
