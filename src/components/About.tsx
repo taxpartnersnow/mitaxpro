@@ -140,12 +140,6 @@ const About = () => {
           </div>
           
           <div className="animate-slide-in-right">
-            {/* Logo prominente */}
-            <div className="text-center mb-12">
-              <img src={mitaxProLogoTransparent} alt="MiTax Pro Logo" className="h-32 w-auto mx-auto hover:scale-105 transition-transform duration-500 animate-float" />
-              <h3 className="text-2xl font-bold mt-4 text-primary">MiTax Pro</h3>
-              <p className="text-muted-foreground">Tu socio de confianza</p>
-            </div>
 
             {/* Stats grid */}
             <div className="grid grid-cols-2 gap-6">
