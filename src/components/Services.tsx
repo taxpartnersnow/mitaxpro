@@ -94,7 +94,11 @@ const Services = () => {
                     </span>
                   </div>
                   <div className="text-center">
-                    <Button variant="outline" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+                    <Button 
+                      variant="outline" 
+                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+                      onClick={() => window.open('https://wa.me/17187081844', '_blank')}
+                    >
                       Comunícate con un asesor para más información
                     </Button>
                   </div>
