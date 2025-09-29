@@ -21,8 +21,8 @@ const Header = () => {
               Nosotros
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
-            <a href="#contact" className="text-foreground hover:text-primary transition-all duration-300 relative group font-medium text-lg">
-              Contacto
+            <a href="https://wa.me/17187081844" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-all duration-300 relative group font-medium text-lg">
+              Contáctanos
               <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           </nav>
@@ -51,8 +51,8 @@ const Header = () => {
               <a href="#about" className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-lg py-2" onClick={() => setIsMenuOpen(false)}>
                 Nosotros
               </a>
-              <a href="#contact" className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-lg py-2" onClick={() => setIsMenuOpen(false)}>
-                Contacto
+              <a href="https://wa.me/17187081844" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-lg py-2" onClick={() => setIsMenuOpen(false)}>
+                Contáctanos
               </a>
               <a href="https://cal.com/diego-8oyx2o/15min" target="_blank" rel="noopener noreferrer" className="w-full">
                 <Button variant="premium" size="lg" className="w-full mt-4">
