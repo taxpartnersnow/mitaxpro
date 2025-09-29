@@ -114,7 +114,12 @@ const Services = () => {
               <Button variant="premium" size="lg" className="text-xl px-12 py-4">
                 Agenda tu consulta gratuita aquí
               </Button>
-              <Button variant="outline" size="lg" className="text-xl px-12 py-4 hover:bg-primary hover:text-primary-foreground">
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="text-xl px-12 py-4 hover:bg-primary hover:text-primary-foreground"
+                onClick={() => window.open('https://wa.me/17187081844', '_blank')}
+              >
                 Contáctanos
               </Button>
             </div>
