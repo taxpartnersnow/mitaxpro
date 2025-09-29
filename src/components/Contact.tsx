@@ -62,7 +62,7 @@ const Contact = () => {
               {/* Logo en el formulario */}
               <div className="bg-gradient-primary p-6 text-center">
                 <h2 className="text-2xl font-bold mx-auto mb-4 text-black">
-                  Tax Partners
+                  Mi Tax Pro
                 </h2>
                 <h3 className="text-2xl font-bold text-primary-foreground">¡Contáctanos Ahora!</h3>
                 <p className="text-primary-foreground/90">Respuesta garantizada en 24 horas</p>
