@@ -8,7 +8,7 @@ const contactInfo = [
   {
     icon: Phone,
     title: "Teléfono",
-    details: ["(555) 123-4567", "(555) 987-6543"],
+    details: ["(718) 708-1844"],
     gradient: "from-blue-500 to-cyan-500"
   },
   {
