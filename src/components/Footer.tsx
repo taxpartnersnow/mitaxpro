@@ -63,8 +63,7 @@ const Footer = () => {
                   <Phone className="w-5 h-5 text-primary-glow group-hover:text-white" />
                 </div>
                 <div>
-                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">(555) 123-4567</p>
-                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">(555) 987-6543</p>
+                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">(718) 708-1844</p>
                 </div>
               </div>
               
