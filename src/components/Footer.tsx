@@ -16,7 +16,7 @@ const Footer = () => {
           <div className="lg:col-span-2 animate-fade-in">
             <div className="mb-8">
               
-              <h3 className="text-2xl font-bold text-primary-glow mb-4">TaxPartners</h3>
+              <h3 className="text-2xl font-bold text-primary-glow mb-4">MiTaxPro</h3>
             </div>
             <p className="text-gray-200 mb-8 text-lg leading-relaxed max-w-md">Tu socio confiable en servicios fiscales y legales. Más de 5 años ayudando a la comunidad hispana en Estados Unidos a alcanzar sus objetivos financieros.</p>
             
