@@ -22,10 +22,10 @@ const Footer = () => {
             
             {/* Social Media con animaciones */}
             <div className="flex space-x-6">
-              {[{
+            {[{
               icon: Facebook,
               label: "Facebook",
-              url: "#"
+              url: "https://www.facebook.com/profile.php?id=61581386008171"
             }, {
               icon: Instagram,
               label: "Instagram",
