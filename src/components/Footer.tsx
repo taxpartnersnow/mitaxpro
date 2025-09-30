@@ -29,7 +29,7 @@ const Footer = () => {
             }, {
               icon: Instagram,
               label: "Instagram",
-              url: "https://www.instagram.com/taxpartners1?igsh=MW83ZWlzdG8zbHo1MA=="
+              url: "https://www.instagram.com/mi.taxpro/"
             }].map((social, index) => <a key={index} href={social.url} target="_blank" rel="noopener noreferrer" className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center hover:bg-primary hover:scale-110 transition-all duration-300 cursor-pointer group backdrop-blur-sm border border-white/20">
                   <social.icon className="w-6 h-6 text-gray-300 group-hover:text-white transition-colors duration-300" />
                 </a>)}
