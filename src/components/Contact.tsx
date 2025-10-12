@@ -1,8 +1,20 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Phone, Mail, MapPin, Clock, MessageCircle, Send } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
+import { z } from "zod";
+
+const contactSchema = z.object({
+  nombre_completo: z.string().trim().min(1, "El nombre es requerido").max(100, "El nombre debe tener menos de 100 caracteres"),
+  telefono: z.string().trim().min(1, "El teléfono es requerido").max(20, "El teléfono debe tener menos de 20 caracteres"),
+  email: z.string().trim().email("Email inválido").max(255, "El email debe tener menos de 255 caracteres"),
+  servicio_interes: z.string().min(1, "Debes seleccionar un servicio"),
+  mensaje: z.string().trim().max(1000, "El mensaje debe tener menos de 1000 caracteres").optional(),
+});
 
 const contactInfo = [
   {
@@ -32,6 +44,76 @@ const contactInfo = [
 ];
 
 const Contact = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [formData, setFormData] = useState({
+    nombre_completo: "",
+    telefono: "",
+    email: "",
+    servicio_interes: "",
+    mensaje: "",
+  });
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      // Validar datos
+      const validatedData = contactSchema.parse(formData);
+
+      // Guardar en la base de datos
+      const { error } = await supabase
+        .from("prospectos")
+        .insert([{
+          nombre_completo: validatedData.nombre_completo,
+          telefono: validatedData.telefono,
+          email: validatedData.email,
+          servicio_interes: validatedData.servicio_interes,
+          mensaje: validatedData.mensaje || null,
+        }]);
+
+      if (error) throw error;
+
+      toast({
+        title: "¡Mensaje enviado con éxito!",
+        description: "Te contactaremos en menos de 24 horas.",
+      });
+
+      // Limpiar formulario
+      setFormData({
+        nombre_completo: "",
+        telefono: "",
+        email: "",
+        servicio_interes: "",
+        mensaje: "",
+      });
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        toast({
+          title: "Error en el formulario",
+          description: error.errors[0].message,
+          variant: "destructive",
+        });
+      } else {
+        toast({
+          title: "Error al enviar",
+          description: "Por favor intenta nuevamente.",
+          variant: "destructive",
+        });
+      }
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleInputChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+  ) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({ ...prev, [name]: value }));
+  };
+
   return (
     <section id="contact" className="py-24 bg-gradient-to-br from-background via-accent to-background relative overflow-hidden">
       {/* Background decorations */}
@@ -68,71 +150,100 @@ const Contact = () => {
                 <p className="text-primary-foreground/90">Respuesta garantizada en 24 horas</p>
               </div>
 
-              <CardContent className="p-8 space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <CardContent className="p-8">
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="group">
+                      <label className="text-sm font-semibold mb-3 block text-foreground group-focus-within:text-primary transition-colors duration-300">
+                        Nombre Completo
+                      </label>
+                      <Input 
+                        name="nombre_completo"
+                        value={formData.nombre_completo}
+                        onChange={handleInputChange}
+                        placeholder="Tu nombre completo" 
+                        className="h-12 border-2 border-border focus:border-primary transition-all duration-300 hover:border-primary/50"
+                        required
+                      />
+                    </div>
+                    <div className="group">
+                      <label className="text-sm font-semibold mb-3 block text-foreground group-focus-within:text-primary transition-colors duration-300">
+                        Teléfono
+                      </label>
+                      <Input 
+                        name="telefono"
+                        value={formData.telefono}
+                        onChange={handleInputChange}
+                        placeholder="(555) 123-4567" 
+                        className="h-12 border-2 border-border focus:border-primary transition-all duration-300 hover:border-primary/50"
+                        required
+                      />
+                    </div>
+                  </div>
+                
                   <div className="group">
                     <label className="text-sm font-semibold mb-3 block text-foreground group-focus-within:text-primary transition-colors duration-300">
-                      Nombre Completo
+                      Email
                     </label>
                     <Input 
-                      placeholder="Tu nombre completo" 
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="tu@email.com" 
                       className="h-12 border-2 border-border focus:border-primary transition-all duration-300 hover:border-primary/50"
+                      required
                     />
                   </div>
+                
                   <div className="group">
                     <label className="text-sm font-semibold mb-3 block text-foreground group-focus-within:text-primary transition-colors duration-300">
-                      Teléfono
+                      Servicio de Interés
                     </label>
-                    <Input 
-                      placeholder="(555) 123-4567" 
-                      className="h-12 border-2 border-border focus:border-primary transition-all duration-300 hover:border-primary/50"
+                    <select 
+                      name="servicio_interes"
+                      value={formData.servicio_interes}
+                      onChange={handleInputChange}
+                      className="w-full h-12 p-4 border-2 border-border rounded-md bg-background focus:border-primary transition-all duration-300 hover:border-primary/50 font-medium"
+                      required
+                    >
+                      <option value="">Selecciona un servicio</option>
+                      <option value="Preparación de Impuestos">Preparación de Impuestos</option>
+                      <option value="Creación de LLC">Creación de LLC</option>
+                      <option value="Servicios de Migración">Servicios de Migración</option>
+                    </select>
+                  </div>
+                
+                  <div className="group">
+                    <label className="text-sm font-semibold mb-3 block text-foreground group-focus-within:text-primary transition-colors duration-300">
+                      Mensaje
+                    </label>
+                    <Textarea 
+                      name="mensaje"
+                      value={formData.mensaje}
+                      onChange={handleInputChange}
+                      placeholder="Cuéntanos cómo podemos ayudarte..." 
+                      rows={6}
+                      className="border-2 border-border focus:border-primary transition-all duration-300 hover:border-primary/50"
                     />
                   </div>
-                </div>
                 
-                <div className="group">
-                  <label className="text-sm font-semibold mb-3 block text-foreground group-focus-within:text-primary transition-colors duration-300">
-                    Email
-                  </label>
-                  <Input 
-                    type="email" 
-                    placeholder="tu@email.com" 
-                    className="h-12 border-2 border-border focus:border-primary transition-all duration-300 hover:border-primary/50"
-                  />
-                </div>
-                
-                <div className="group">
-                  <label className="text-sm font-semibold mb-3 block text-foreground group-focus-within:text-primary transition-colors duration-300">
-                    Servicio de Interés
-                  </label>
-                  <select className="w-full h-12 p-4 border-2 border-border rounded-md bg-background focus:border-primary transition-all duration-300 hover:border-primary/50 font-medium">
-                    <option>Selecciona un servicio</option>
-                    <option>Preparación de Impuestos</option>
-                    <option>Creación de LLC</option>
-                    <option>Servicios de Migración</option>
-                  </select>
-                </div>
-                
-                <div className="group">
-                  <label className="text-sm font-semibold mb-3 block text-foreground group-focus-within:text-primary transition-colors duration-300">
-                    Mensaje
-                  </label>
-                  <Textarea 
-                    placeholder="Cuéntanos cómo podemos ayudarte..." 
-                    rows={6}
-                    className="border-2 border-border focus:border-primary transition-all duration-300 hover:border-primary/50"
-                  />
-                </div>
-                
-                <Button variant="premium" size="lg" className="w-full text-xl py-4 group">
-                  <Send className="w-5 h-5 mr-3 group-hover:translate-x-1 transition-transform duration-300" />
-                  Enviar Mensaje
-                </Button>
+                  <Button 
+                    type="submit" 
+                    variant="premium" 
+                    size="lg" 
+                    className="w-full text-xl py-4 group"
+                    disabled={isSubmitting}
+                  >
+                    <Send className="w-5 h-5 mr-3 group-hover:translate-x-1 transition-transform duration-300" />
+                    {isSubmitting ? "Enviando..." : "Enviar Mensaje"}
+                  </Button>
 
-                <p className="text-sm text-muted-foreground text-center">
-                  Al enviar este formulario, aceptas recibir comunicaciones de TaxPartners. 
-                  Tu información está 100% protegida.
-                </p>
+                  <p className="text-sm text-muted-foreground text-center">
+                    Al enviar este formulario, aceptas recibir comunicaciones de TaxPartners. 
+                    Tu información está 100% protegida.
+                  </p>
+                </form>
               </CardContent>
             </Card>
           </div>
