@@ -237,7 +237,7 @@ const Contact = () => {
                   </Button>
 
                   <p className="text-sm text-muted-foreground text-center">
-                    Al enviar este formulario, aceptas recibir comunicaciones de TaxPartners. 
+                    Al enviar este formulario, aceptas recibir comunicaciones de Mi Tax Pro. 
                     Tu información está 100% protegida.
                   </p>
                 </form>
