@@ -276,18 +276,6 @@ const Contact = () => {
                 ))}
               </div>
             </div>
-            
-
-            {/* Additional CTA */}
-            <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-primary/20 text-center">
-              <h4 className="text-2xl font-bold mb-4">¿Prefieres que te llamemos?</h4>
-              <p className="text-muted-foreground mb-6 text-lg">
-                Déjanos tu número y un experto te contactará en menos de 2 horas
-              </p>
-              <Button variant="premium" size="lg" className="text-lg px-8">
-                Solicitar Llamada
-              </Button>
-            </div>
           </div>
         </div>
       </div>
