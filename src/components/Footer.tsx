@@ -72,7 +72,7 @@ const Footer = () => {
                   <Mail className="w-5 h-5 text-primary-glow group-hover:text-white" />
                 </div>
                 <div>
-                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">servicio@mitaxpro.us servicio@mitaxpro.us </p>
+                  <p className="text-gray-300 group-hover:text-white transition-colors duration-300">servicio@mitaxpro.us </p>
                   <p className="text-gray-300 group-hover:text-white transition-colors duration-300">
                 </p>
                 </div>
