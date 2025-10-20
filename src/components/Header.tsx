@@ -29,7 +29,7 @@ const Header = () => {
           
           {/* Desktop CTA */}
           <div className="hidden md:block animate-bounce-in">
-            <a href="https://cal.com/diego-8oyx2o/15min" target="_blank" rel="noopener noreferrer">
+            <a href="https://cal.com/mitaxpro/30min" target="_blank" rel="noopener noreferrer">
               <Button variant="premium" size="lg" className="text-lg">
                 Agenda tu consulta gratuita aquí
               </Button>
@@ -54,7 +54,7 @@ const Header = () => {
               <a href="https://wa.me/17187081844" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-primary transition-colors duration-300 font-medium text-lg py-2" onClick={() => setIsMenuOpen(false)}>
                 Contáctanos
               </a>
-              <a href="https://cal.com/diego-8oyx2o/15min" target="_blank" rel="noopener noreferrer" className="w-full">
+              <a href="https://cal.com/mitaxpro/30min" target="_blank" rel="noopener noreferrer" className="w-full">
                 <Button variant="premium" size="lg" className="w-full mt-4">
                   Agenda tu consulta gratuita aquí
                 </Button>
