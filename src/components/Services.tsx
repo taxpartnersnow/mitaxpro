@@ -115,7 +115,12 @@ const Services = () => {
               Nuestros expertos te ayudarán a encontrar la solución perfecta para tu situación
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button variant="premium" size="lg" className="text-xl px-12 py-4">
+              <Button 
+                variant="premium" 
+                size="lg" 
+                className="text-xl px-12 py-4"
+                onClick={() => window.open('https://cal.com/mitaxpro/30min', '_blank')}
+              >
                 Agenda tu consulta gratuita aquí
               </Button>
               <Button 
