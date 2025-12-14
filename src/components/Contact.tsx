@@ -26,7 +26,7 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    details: ["taxpartnersnow@gmail.com"],
+    details: ["servicio@mitaxpro.us"],
     gradient: "from-purple-500 to-pink-500"
   },
   {
