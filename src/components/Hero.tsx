@@ -32,9 +32,9 @@ const Hero = () => {
             </div>
 
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              Servicios Fiscales y Legales{" "}
+              Servicios tributarios y fiscales profesionales{" "}
               <span className="text-primary-glow">
-                profesionales
+                para latinos y inmigrantes
               </span>
             </h1>
             
