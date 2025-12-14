@@ -33,7 +33,9 @@ const Hero = () => {
 
             <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
               Servicios tributarios y fiscales profesionales{" "}
-              <span className="text-primary-glow">para latinos y inmigrantes en Estados Unidos</span>
+              <span className="text-primary-glow">para latinos y inmigrantes en </span>
+              <span className="text-usa-blue">Estados</span>{" "}
+              <span className="text-usa-red">Unidos</span>
             </h1>
             
             <p className="text-lg lg:text-xl mb-8 leading-relaxed max-w-2xl text-zinc-200">Especialistas en declaraciones de impuestos para latinos e inmigrantes en Estados Unidos.                  </p>

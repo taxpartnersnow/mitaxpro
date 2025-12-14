@@ -53,6 +53,10 @@ All colors MUST be HSL.
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
+    /* USA Flag colors */
+    --usa-blue: 219 79% 24%;
+    --usa-red: 355 91% 40%;
+
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
