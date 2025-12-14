@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { FileText, Building, CreditCard, Users, ArrowRight, Check } from "lucide-react";
 const services = [{
   icon: FileText,
-  title: "Preparación de Impuestos para personas",
+  title: "Preparación de Impuestos \npara personas",
   description: "Maximiza tu reembolso con nuestro servicio experto de preparación de taxes. Manejamos todo tipo de situaciones fiscales con precisión y cuidado.",
   features: ["Taxes personales y de negocio", "Maximización de deducciones", "Representación ante el IRS", "E-filing incluido", "Revisión gratuita"],
   price: "Consulta gratuita",
@@ -67,7 +67,7 @@ const Services = () => {
                   {/* Floating animation ring */}
                   <div className="absolute inset-0 w-20 h-20 mx-auto border-2 border-primary/30 rounded-2xl animate-pulse group-hover:scale-125 transition-transform duration-500"></div>
                 </div>
-                <CardTitle className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors duration-300">
+                <CardTitle className="text-2xl font-bold mb-3 group-hover:text-primary transition-colors duration-300 whitespace-pre-line">
                   {service.title}
                 </CardTitle>
                 <CardDescription className="text-base leading-relaxed">
