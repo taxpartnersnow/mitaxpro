@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { FileText, Building, CreditCard, Users, ArrowRight, Check } from "lucide-react";
 const services = [{
   icon: FileText,
-  title: "Preparación de Impuestos",
+  title: "Preparación de Impuestos para personas",
   description: "Maximiza tu reembolso con nuestro servicio experto de preparación de taxes. Manejamos todo tipo de situaciones fiscales con precisión y cuidado.",
   features: ["Taxes personales y de negocio", "Maximización de deducciones", "Representación ante el IRS", "E-filing incluido", "Revisión gratuita"],
   price: "Consulta gratuita",
