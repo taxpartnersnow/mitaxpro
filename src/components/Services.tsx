@@ -19,7 +19,7 @@ const services = [{
   gradient: "from-green-500 to-emerald-600"
 }, {
   icon: Users,
-  title: "Preparación de impuestos \npara corporaciones",
+  title: "Preparación de Impuestos \npara corporaciones",
   description: "Te acompañamos en tu proceso migratorio con asesoría experta y representación legal especializada en inmigración.",
   features: ["Asesoría migratoria completa", "Preparación de documentos", "Representación legal", "Seguimiento de casos", "Soporte 24/7"],
   price: "Consulta gratuita",
