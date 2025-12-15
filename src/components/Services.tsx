@@ -5,7 +5,7 @@ const services = [{
   icon: FileText,
   title: "Preparación de Impuestos \npara personas",
   description: "Maximiza tu reembolso con nuestro servicio experto de preparación de taxes. Manejamos todo tipo de situaciones fiscales con precisión y cuidado.",
-  features: ["Taxes personales y de negocio", "Maximización de deducciones", "Representación ante el IRS", "E-filing incluido", "Revisión gratuita", "Soporte 24/7"],
+  features: ["Impuestos personales", "Maximización de deducciones", "Representación ante el IRS", "E-filing incluido", "Revisión gratuita", "Soporte 24/7"],
   price: "Consulta gratuita",
   badge: "Más Popular",
   gradient: "from-blue-500 to-purple-600"
