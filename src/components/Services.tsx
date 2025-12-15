@@ -10,14 +10,6 @@ const services = [{
   badge: "Más Popular",
   gradient: "from-blue-500 to-purple-600"
 }, {
-  icon: Building,
-  title: "Creación de LLC",
-  description: "Establece tu negocio de manera legal y protege tus activos personales con nuestro servicio completo de incorporación empresarial.",
-  features: ["Registro en el estado", "Número EIN federal", "Operating Agreement", "Asesoría legal incluida", "Seguimiento completo"],
-  price: "Consulta gratuita",
-  badge: "Recomendado",
-  gradient: "from-green-500 to-emerald-600"
-}, {
   icon: Users,
   title: "Preparación de Impuestos \npara corporaciones",
   description: "Optimiza la situación fiscal de tu negocio y asegura el cumplimiento. Nuestro servicio especializado maneja la complejidad de los impuestos corporativos para que tú te enfoques en crecer.",
@@ -25,6 +17,14 @@ const services = [{
   price: "Consulta gratuita",
   badge: "Más Popular",
   gradient: "from-purple-500 to-pink-600"
+}, {
+  icon: Building,
+  title: "Creación de LLC",
+  description: "Establece tu negocio de manera legal y protege tus activos personales con nuestro servicio completo de incorporación empresarial.",
+  features: ["Registro en el estado", "Número EIN federal", "Operating Agreement", "Asesoría legal incluida", "Seguimiento completo"],
+  price: "Consulta gratuita",
+  badge: "Recomendado",
+  gradient: "from-green-500 to-emerald-600"
 }];
 const Services = () => {
   return <section id="services" className="py-24 bg-gradient-overlay relative overflow-hidden">
