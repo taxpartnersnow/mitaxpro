@@ -19,7 +19,7 @@ const Hero = () => {
             <div className="flex items-center space-x-6 mb-8">
               <div className="flex items-center space-x-2 px-4 py-2 bg-primary-glow/20 rounded-full border border-primary-glow/30">
                 <CheckCircle className="w-5 h-5 text-primary-glow" />
-                <span className="text-primary-glow font-medium">Garantía</span>
+                <span className="text-primary-glow font-medium">Garantizado</span>
               </div>
               <div className="flex items-center space-x-2 px-4 py-2 bg-primary-glow/20 rounded-full border border-primary-glow/30">
                 <Shield className="w-5 h-5 text-primary-glow" />
