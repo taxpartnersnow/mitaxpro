@@ -113,11 +113,7 @@ const About = () => {
               </span>
             </h2>
             
-            <p className="text-xl lg:text-2xl mb-10 text-muted-foreground leading-relaxed">
-              Somos una firma especializada en servicios fiscales y legales para la comunidad hispana. 
-              Nuestro equipo de expertos certificados te brinda la tranquilidad y confianza que necesitas 
-              para manejar tus asuntos financieros y legales con total profesionalismo.
-            </p>
+            <p className="text-xl lg:text-2xl mb-10 text-muted-foreground leading-relaxed">Somos una firma especializada en servicios fiscales y tributarios para la comunidad hispana. Nuestro equipo de expertos certificados te brinda la tranquilidad y confianza que necesitas para manejar tus asuntos financieros y legales con total profesionalismo.</p>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
               {benefits.map((benefit, index) => <div key={index} className="group p-4 rounded-2xl bg-white/50 backdrop-blur-sm border border-primary/20 hover:bg-white/80 transition-all duration-500 hover:shadow-lg hover:-translate-y-1">
