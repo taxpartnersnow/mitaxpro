@@ -29,7 +29,7 @@ const services = [{
 
 const casosDeExito = [
 {
-  amount: "$12,500",
+  amount: "$2,700",
   label: "Soltero I 25 años",
   description: "Cliente con 3 años sin declarar impuestos logró regularizarse y recibir su reembolso completo.",
   client: "Familia Rodríguez"
