@@ -29,8 +29,8 @@ const services = [{
 
 const casosDeExito = [
 {
-  amount: "$2,700",
-  label: "Soltero I 25 años",
+  amount: "$12,500",
+  label: "Reembolso obtenido",
   description: "Cliente con 3 años sin declarar impuestos logró regularizarse y recibir su reembolso completo.",
   client: "Familia Rodríguez"
 },
@@ -63,9 +63,9 @@ const Services = () => {
             
 
 
-            <h2 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
-              Estos son los resultados de nuestros clientes
-            </h2>
+            <h2 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">Estos son algunos de  los resultados de nuestros clientes
+
+          </h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Historias reales de clientes que confiaron en nosotros y obtuvieron resultados extraordinarios
             </p>
