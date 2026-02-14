@@ -28,25 +28,25 @@ const services = [{
 }];
 
 const casosDeExito = [
-  {
-    amount: "$12,500",
-    label: "Reembolso obtenido",
-    description: "Cliente con 3 años sin declarar impuestos logró regularizarse y recibir su reembolso completo.",
-    client: "Familia Rodríguez",
-  },
-  {
-    amount: "$45,000",
-    label: "Deuda reducida con el IRS",
-    description: "Negociamos exitosamente una reducción de deuda significativa, evitando embargos y penalidades.",
-    client: "Empresa López & Asociados",
-  },
-  {
-    amount: "100%",
-    label: "Protección de activos",
-    description: "Creación de LLC con estructura fiscal óptima que protegió los activos personales del cliente.",
-    client: "Carlos M., Emprendedor",
-  },
-];
+{
+  amount: "$12,500",
+  label: "Reembolso obtenido",
+  description: "Cliente con 3 años sin declarar impuestos logró regularizarse y recibir su reembolso completo.",
+  client: "Familia Rodríguez"
+},
+{
+  amount: "$45,000",
+  label: "Deuda reducida con el IRS",
+  description: "Negociamos exitosamente una reducción de deuda significativa, evitando embargos y penalidades.",
+  client: "Empresa López & Asociados"
+},
+{
+  amount: "100%",
+  label: "Protección de activos",
+  description: "Creación de LLC con estructura fiscal óptima que protegió los activos personales del cliente.",
+  client: "Carlos M., Emprendedor"
+}];
+
 
 const Services = () => {
   return <section id="services" className="py-24 bg-gradient-overlay relative overflow-hidden">
@@ -60,9 +60,9 @@ const Services = () => {
         {/* Resultados de clientes + Casos de éxito */}
         <div className="mb-24 animate-fade-in">
           <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-6">
-              <span className="text-primary font-semibold">Resultados Comprobados</span>
-            </div>
+            
+
+
             <h2 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
               Estos son los resultados de nuestros clientes
             </h2>
@@ -72,11 +72,11 @@ const Services = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {casosDeExito.map((caso, index) => (
-              <div
-                key={index}
-                className="relative bg-gradient-card rounded-3xl p-8 shadow-xl hover:shadow-glow transition-all duration-500 hover:-translate-y-2 group overflow-hidden"
-              >
+            {casosDeExito.map((caso, index) =>
+          <div
+            key={index}
+            className="relative bg-gradient-card rounded-3xl p-8 shadow-xl hover:shadow-glow transition-all duration-500 hover:-translate-y-2 group overflow-hidden">
+
                 <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-3xl"></div>
                 <div className="relative z-10">
                   <div className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
@@ -93,7 +93,7 @@ const Services = () => {
                   </div>
                 </div>
               </div>
-            ))}
+          )}
           </div>
         </div>
 
@@ -157,11 +157,11 @@ const Services = () => {
                     </span>
                   </div>
                   <div className="text-center">
-                    <Button 
-                      variant="outline" 
-                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
-                      onClick={() => window.open('https://wa.me/17187081844', '_blank')}
-                    >
+                    <Button
+                  variant="outline"
+                  className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300"
+                  onClick={() => window.open('https://wa.me/17187081844', '_blank')}>
+
                       Comunícate con un asesor para más información
                     </Button>
                   </div>
@@ -178,20 +178,20 @@ const Services = () => {
               Nuestros expertos te ayudarán a encontrar la solución perfecta para tu situación
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                variant="premium" 
-                size="lg" 
-                className="text-xl px-12 py-4"
-                onClick={() => window.open('https://cal.com/mitaxpro/30min', '_blank')}
-              >
+              <Button
+              variant="premium"
+              size="lg"
+              className="text-xl px-12 py-4"
+              onClick={() => window.open('https://cal.com/mitaxpro/30min', '_blank')}>
+
                 Agenda tu consulta gratuita aquí
               </Button>
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="text-xl px-12 py-4 hover:bg-primary hover:text-primary-foreground"
-                onClick={() => window.open('https://wa.me/17187081844', '_blank')}
-              >
+              <Button
+              variant="outline"
+              size="lg"
+              className="text-xl px-12 py-4 hover:bg-primary hover:text-primary-foreground"
+              onClick={() => window.open('https://wa.me/17187081844', '_blank')}>
+
                 Contáctanos
               </Button>
             </div>
