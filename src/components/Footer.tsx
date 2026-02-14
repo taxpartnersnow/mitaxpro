@@ -94,8 +94,8 @@ const Footer = () => {
         <div className="border-t border-white/20 mt-16 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-center md:text-left">
-              <p>© 2025 MiTaxPro. 
-Todos los derechos reservados.
+              <p>© 2026 MiTaxPro.  Todos los derechos reservados.
+
             </p>
               <p className="text-sm mt-1">Licenciado y autorizado para operar en Estados Unidos</p>
             </div>
