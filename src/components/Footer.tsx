@@ -18,7 +18,7 @@ const Footer = () => {
               
               <h3 className="text-2xl font-bold text-primary-glow mb-4">MiTaxPro</h3>
             </div>
-            <p className="text-gray-200 mb-8 text-lg leading-relaxed max-w-md">Tu socio confiable en servicios fiscales y legales. Más de 5 años ayudando a la comunidad hispana en Estados Unidos a alcanzar sus objetivos financieros.</p>
+            <p className="text-gray-200 mb-8 text-lg leading-relaxed max-w-md">Tu socio confiable en servicios fiscales y tributarios. Más de 5 años ayudando a la comunidad hispana en Estados Unidos a alcanzar sus objetivos financieros.</p>
             
             {/* Social Media con animaciones */}
             <div className="flex space-x-6">
