@@ -26,6 +26,28 @@ const services = [{
   badge: "Recomendado",
   gradient: "from-green-500 to-emerald-600"
 }];
+
+const casosDeExito = [
+  {
+    amount: "$12,500",
+    label: "Reembolso obtenido",
+    description: "Cliente con 3 años sin declarar impuestos logró regularizarse y recibir su reembolso completo.",
+    client: "Familia Rodríguez",
+  },
+  {
+    amount: "$45,000",
+    label: "Deuda reducida con el IRS",
+    description: "Negociamos exitosamente una reducción de deuda significativa, evitando embargos y penalidades.",
+    client: "Empresa López & Asociados",
+  },
+  {
+    amount: "100%",
+    label: "Protección de activos",
+    description: "Creación de LLC con estructura fiscal óptima que protegió los activos personales del cliente.",
+    client: "Carlos M., Emprendedor",
+  },
+];
+
 const Services = () => {
   return <section id="services" className="py-24 bg-gradient-overlay relative overflow-hidden">
       {/* Background decoration */}
@@ -35,14 +57,44 @@ const Services = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Resultados de clientes */}
-        <div className="text-center mb-24 animate-fade-in">
-          <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-6">
-            <span className="text-primary font-semibold">Resultados Comprobados</span>
+        {/* Resultados de clientes + Casos de éxito */}
+        <div className="mb-24 animate-fade-in">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-6">
+              <span className="text-primary font-semibold">Resultados Comprobados</span>
+            </div>
+            <h2 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+              Estos son los resultados de nuestros clientes
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Historias reales de clientes que confiaron en nosotros y obtuvieron resultados extraordinarios
+            </p>
           </div>
-          <h2 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
-            Estos son los resultados de nuestros clientes
-          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {casosDeExito.map((caso, index) => (
+              <div
+                key={index}
+                className="relative bg-gradient-card rounded-3xl p-8 shadow-xl hover:shadow-glow transition-all duration-500 hover:-translate-y-2 group overflow-hidden"
+              >
+                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-3xl"></div>
+                <div className="relative z-10">
+                  <div className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
+                    {caso.amount}
+                  </div>
+                  <div className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">
+                    {caso.label}
+                  </div>
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    {caso.description}
+                  </p>
+                  <div className="border-t border-border/50 pt-4">
+                    <span className="text-sm font-medium text-foreground">{caso.client}</span>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* Servicios */}
@@ -116,65 +168,6 @@ const Services = () => {
                 </div>
               </CardContent>
             </Card>)}
-        </div>
-
-        {/* Casos de éxito */}
-        <div className="mt-24 animate-fade-in">
-          <div className="text-center mb-16">
-            <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-6">
-              <span className="text-primary font-semibold">Resultados Reales</span>
-            </div>
-            <h3 className="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
-              Casos de Éxito
-            </h3>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Historias reales de clientes que confiaron en nosotros y obtuvieron resultados extraordinarios
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              {
-                amount: "$12,500",
-                label: "Reembolso obtenido",
-                description: "Cliente con 3 años sin declarar impuestos logró regularizarse y recibir su reembolso completo.",
-                client: "Familia Rodríguez",
-              },
-              {
-                amount: "$45,000",
-                label: "Deuda reducida con el IRS",
-                description: "Negociamos exitosamente una reducción de deuda significativa, evitando embargos y penalidades.",
-                client: "Empresa López & Asociados",
-              },
-              {
-                amount: "100%",
-                label: "Protección de activos",
-                description: "Creación de LLC con estructura fiscal óptima que protegió los activos personales del cliente.",
-                client: "Carlos M., Emprendedor",
-              },
-            ].map((caso, index) => (
-              <div
-                key={index}
-                className="relative bg-gradient-card rounded-3xl p-8 shadow-xl hover:shadow-glow transition-all duration-500 hover:-translate-y-2 group overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-primary opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-3xl"></div>
-                <div className="relative z-10">
-                  <div className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
-                    {caso.amount}
-                  </div>
-                  <div className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">
-                    {caso.label}
-                  </div>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
-                    {caso.description}
-                  </p>
-                  <div className="border-t border-border/50 pt-4">
-                    <span className="text-sm font-medium text-foreground">{caso.client}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
 
         {/* Call to Action */}
