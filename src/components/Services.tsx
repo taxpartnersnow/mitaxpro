@@ -35,6 +35,17 @@ const Services = () => {
       </div>
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Resultados de clientes */}
+        <div className="text-center mb-24 animate-fade-in">
+          <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-6">
+            <span className="text-primary font-semibold">Resultados Comprobados</span>
+          </div>
+          <h2 className="text-5xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-foreground to-primary bg-clip-text text-transparent">
+            Estos son los resultados de nuestros clientes
+          </h2>
+        </div>
+
+        {/* Servicios */}
         <div className="text-center mb-20 animate-fade-in">
           <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-6">
             <span className="text-primary font-semibold">Nuestros Servicios Profesionales</span>
