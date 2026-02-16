@@ -169,22 +169,22 @@ const About = () => {
             })]} setApi={setCarouselApi} className="w-full">
                 <CarouselContent>
                   {testimonials.map((testimonial, index) => <CarouselItem key={index}>
-                      <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-xl border border-primary/20 hover:shadow-glow transition-all duration-500">
-                        <div className="flex items-center space-x-4 mb-4">
-                          <div className="w-12 h-12 bg-gradient-primary rounded-full flex items-center justify-center">
-                            <span className="text-primary-foreground font-bold">{testimonial.initials}</span>
-                          </div>
-                          <div>
-                            <h4 className="font-bold">{testimonial.name}</h4>
-                            <div className="flex space-x-1">
-                              {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="w-4 h-4 text-primary-glow fill-current" />)}
-                            </div>
-                          </div>
-                        </div>
-                        <p className="text-muted-foreground italic">
-                          "{testimonial.comment}"
-                        </p>
-                      </div>
+                      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                     </CarouselItem>)}
                 </CarouselContent>
                 
