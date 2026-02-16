@@ -189,9 +189,9 @@ const About = () => {
                 </CarouselContent>
                 
                 {/* Navigation dots */}
-                <div className="flex justify-center space-x-2 mt-6">
-                  {testimonials.map((_, index) => <button key={index} onClick={() => scrollToSlide(index)} className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentTestimonial ? 'bg-primary scale-125' : 'bg-primary/30 hover:bg-primary/60'}`} aria-label={`Ir al testimonio ${index + 1}`} />)}
-                </div>
+                
+
+
               </Carousel>
             </div>
           </div>
