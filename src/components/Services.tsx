@@ -35,7 +35,7 @@ const casosDeExito = [
   client: "Familia Rodríguez"
 },
 {
-  amount: "$45,000",
+  amount: "$4,500",
   label: "Deuda reducida con el IRS",
   description: "Negociamos exitosamente una reducción de deuda significativa, evitando embargos y penalidades.",
   client: "Empresa López & Asociados"
