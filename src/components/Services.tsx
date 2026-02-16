@@ -30,15 +30,15 @@ const services = [{
 const casosDeExito = [
 {
   amount: "$12,500",
-  label: "Reembolso obtenido\nSoltero",
+  label: "Reembolso obtenido",
   description: "Jacobo, soltero de 24 años, estudia en la universidad y trabaja al mismo tiempo. Logró un reembolso de $4.500 USD, ya que se le aplicó el crédito por estudio y el crédito por trabajo (EITC)",
   client: "Jacobo Gutiérrez"
 },
 {
-  amount: "$6,800",
-  label: "REEMBOLSO OBTENIDO",
+  amount: "$4,500",
+  label: "Deuda reducida con el IRS",
   description: "Esteban y María trabajan en una empresa de aseo y, en sus tiempos libres, trabajan en Amazon Flex; tienen un hijo de 7 años. Ambos obtuvieron ingresos acumulados por $50,000 USD.\n\nSe les aplicó el crédito por trabajo, ya que sus ingresos no superaron los $53,000 USD al año, y también el crédito tributario por hijo menor de 17 años; en total obtuvieron un reembolso de $6,800 USD.",
-  client: "Esteban y María"
+  client: "Empresa López & Asociados"
 },
 {
   amount: "100%",
@@ -82,7 +82,7 @@ const Services = () => {
                   <div className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
                     {caso.amount}
                   </div>
-                  <div className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider whitespace-pre-line">
+                  <div className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">
                     {caso.label}
                   </div>
                   <p className="text-muted-foreground mb-6 leading-relaxed">
