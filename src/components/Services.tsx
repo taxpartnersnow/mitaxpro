@@ -31,7 +31,7 @@ const casosDeExito = [
 {
   amount: "$12,500",
   label: "Reembolso obtenido",
-  description: "Cliente con 3 años sin declarar impuestos logró regularizarse y recibir su reembolso completo.",
+  description: "Jacobo, soltero de 24 años, estudia en la universidad y trabaja al mismo tiempo. Logró un reembolso de $4.500 USD, ya que se le aplicó el crédito por estudio y el crédito por trabajo (EITC)",
   client: "Familia Rodríguez"
 },
 {
