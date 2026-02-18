@@ -31,6 +31,7 @@ const casosDeExito = [
 {
   amount: "$12,500",
   label: "Reembolso obtenido",
+  subLabel: "SOLTERO",
   description: "Jacobo, soltero de 24 años, estudia en la universidad y trabaja al mismo tiempo. Logró un reembolso de $4.500 USD, ya que se le aplicó el crédito por estudio y el crédito por trabajo (EITC)",
   client: "Jacobo Gutiérrez"
 },
@@ -82,9 +83,14 @@ const Services = () => {
                   <div className="text-4xl font-bold bg-gradient-primary bg-clip-text text-transparent mb-2">
                     {caso.amount}
                   </div>
-                  <div className="text-sm font-semibold text-primary mb-4 uppercase tracking-wider">
+                  <div className="text-sm font-semibold text-primary uppercase tracking-wider">
                     {caso.label}
                   </div>
+                  {'subLabel' in caso && (caso as any).subLabel && (
+                    <div className="text-sm font-bold mb-4 uppercase tracking-wider" style={{color: 'hsl(221, 83%, 53%)'}}>
+                      {(caso as any).subLabel}
+                    </div>
+                  )}
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     {caso.description}
                   </p>
