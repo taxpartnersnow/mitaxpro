@@ -45,7 +45,7 @@ const casosDeExito = [
 {
   amount: "100%",
   label: "Protección de activos",
-  description: "Creación de LLC con estructura fiscal óptima que protegió los activos personales del cliente.",
+  description: "Ana Lucía, de 45 años, es coordinadora en una agencia de carga en Miami. Tiene un hijo de 27 años, por quien vela económicamente, ya que presenta una condición física que le impide trabajar.\n\nEl año pasado obtuvo ingresos por $62,000 y recibió un reembolso de $5,302 USD.",
   client: "Carlos M., Emprendedor"
 }];
 
