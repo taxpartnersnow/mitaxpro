@@ -37,7 +37,7 @@ const casosDeExito = [
 },
 {
   amount: "$4,500",
-  label: "Deuda reducida con el IRS",
+  label: "REEMBOLSO OBTENIDO",
   description: "Esteban y María trabajan en una empresa de aseo y, en sus tiempos libres, trabajan en Amazon Flex; tienen un hijo de 7 años. Ambos obtuvieron ingresos acumulados por $50,000 USD.\n\nSe les aplicó el crédito por trabajo, ya que sus ingresos no superaron los $53,000 USD al año, y también el crédito tributario por hijo menor de 17 años; en total obtuvieron un reembolso de $6,800 USD.",
   client: "Esteban y María"
 },
