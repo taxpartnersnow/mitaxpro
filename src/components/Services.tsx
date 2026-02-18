@@ -86,11 +86,11 @@ const Services = () => {
                   <div className="text-sm font-semibold text-primary uppercase tracking-wider">
                     {caso.label}
                   </div>
-                  {'subLabel' in caso && (caso as any).subLabel && (
-                    <div className="text-sm font-bold mb-4 uppercase tracking-wider" style={{color: 'hsl(221, 83%, 53%)'}}>
+                  {'subLabel' in caso && (caso as any).subLabel &&
+              <div className="text-sm font-bold mb-4 uppercase tracking-wider text-secondary" style={{ color: 'hsl(221, 83%, 53%)' }}>
                       {(caso as any).subLabel}
                     </div>
-                  )}
+              }
                   <p className="text-muted-foreground mb-6 leading-relaxed">
                     {caso.description}
                   </p>
