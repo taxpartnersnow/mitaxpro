@@ -2,6 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { FileText, Building, CreditCard, Users, ArrowRight, Check } from "lucide-react";
 import testimonioJacobo from "@/assets/testimonio-jacobo.jpeg";
+import testimonioAnaLucia from "@/assets/testimonio-ana-lucia.png";
 const services = [{
   icon: FileText,
   title: "Preparación de Impuestos \npara personas",
@@ -49,6 +50,7 @@ const casosDeExito = [
   label: "REEMBOLSO OBTENIDO",
   subLabel: "JEFE DE FAMILIA",
   description: "Ana Lucía, de 45 años, es coordinadora en una agencia de carga en Miami. Tiene un hijo de 27 años, por quien vela económicamente, ya que presenta una condición física que le impide trabajar.\n\nEl año pasado obtuvo ingresos por $62,000 y recibió un reembolso de $5,302 USD.",
+  image: testimonioAnaLucia,
   client: "Carlos M., Emprendedor"
 }];
 
