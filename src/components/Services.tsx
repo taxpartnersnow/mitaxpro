@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { FileText, Building, CreditCard, Users, ArrowRight, Check } from "lucide-react";
+import testimonioJacobo from "@/assets/testimonio-jacobo.jpeg";
 const services = [{
   icon: FileText,
   title: "Preparación de Impuestos \npara personas",
@@ -33,6 +34,7 @@ const casosDeExito = [
   label: "Reembolso obtenido",
   subLabel: "SOLTERO",
   description: "Jacobo, soltero de 24 años, estudia en la universidad y trabaja al mismo tiempo. Logró un reembolso de $4.500 USD, ya que se le aplicó el crédito por estudio y el crédito por trabajo (EITC)",
+  image: testimonioJacobo,
   client: "Jacobo Gutiérrez"
 },
 {
@@ -93,9 +95,12 @@ const Services = () => {
                       {(caso as any).subLabel}
                     </div>
               }
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <p className="text-muted-foreground mb-4 leading-relaxed">
                     {caso.description}
                   </p>
+                  {caso.image && (
+                    <img src={caso.image} alt={`Testimonio de ${caso.client}`} className="w-full rounded-2xl mb-6 shadow-lg" />
+                  )}
                   <div className="border-t border-border/50 pt-4">
                     <span className="text-sm font-medium text-foreground">{caso.client}</span>
                   </div>
