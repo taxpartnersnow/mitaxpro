@@ -52,7 +52,7 @@ const casosDeExito = [
 
 
 const Services = () => {
-  return <section id="services" className="py-24 bg-gradient-overlay relative overflow-hidden">
+  return <section className="py-24 bg-gradient-overlay relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
@@ -106,7 +106,7 @@ const Services = () => {
         </div>
 
         {/* Servicios */}
-        <div className="text-center mb-20 animate-fade-in">
+        <div id="services" className="text-center mb-20 animate-fade-in scroll-mt-20">
           <div className="inline-flex items-center px-4 py-2 bg-primary/10 rounded-full mb-6">
             <span className="text-primary font-semibold">Nuestros Servicios Profesionales</span>
           </div>
