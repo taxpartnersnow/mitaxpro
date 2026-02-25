@@ -45,6 +45,7 @@ const casosDeExito = [
 {
   amount: "$5,302",
   label: "REEMBOLSO OBTENIDO",
+  subLabel: "JEFE DE FAMILIA",
   description: "Ana Lucía, de 45 años, es coordinadora en una agencia de carga en Miami. Tiene un hijo de 27 años, por quien vela económicamente, ya que presenta una condición física que le impide trabajar.\n\nEl año pasado obtuvo ingresos por $62,000 y recibió un reembolso de $5,302 USD.",
   client: "Carlos M., Emprendedor"
 }];
@@ -88,7 +89,7 @@ const Services = () => {
                     {caso.label}
                   </div>
                   {'subLabel' in caso && (caso as any).subLabel &&
-              <div className="text-sm font-bold mb-4 uppercase tracking-wider text-primary-foreground" style={{ color: 'hsl(221, 83%, 53%)' }}>
+              <div className="text-sm font-bold mb-4 uppercase tracking-wider text-secondary" style={{ color: 'hsl(221, 83%, 53%)' }}>
                       {(caso as any).subLabel}
                     </div>
               }
