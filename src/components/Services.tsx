@@ -51,7 +51,7 @@ const casosDeExito = [
   subLabel: "JEFE DE FAMILIA",
   description: "Ana Lucía, de 45 años, es coordinadora en una agencia de carga en Miami. Tiene un hijo de 27 años, por quien vela económicamente, ya que presenta una condición física que le impide trabajar.\n\nEl año pasado obtuvo ingresos por $62,000 y recibió un reembolso de $5,302 USD.",
   image: testimonioAnaLucia,
-  client: "Carlos M., Emprendedor"
+  client: "Ana Lucía"
 }];
 
 
