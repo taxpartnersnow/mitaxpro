@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { FileText, Building, CreditCard, Users, ArrowRight, Check } from "lucide-react";
 import testimonioJacobo from "@/assets/testimonio-jacobo.jpeg";
 import testimonioAnaLucia from "@/assets/testimonio-ana-lucia.png";
+import testimonioEstebanMaria from "@/assets/testimonio-esteban-maria.png";
 const services = [{
   icon: FileText,
   title: "Preparación de Impuestos \npara personas",
@@ -43,6 +44,7 @@ const casosDeExito = [
   label: "REEMBOLSO OBTENIDO",
   subLabel: "CASADOS DECLARANDO JUNTOS",
   description: "Esteban y María trabajan en una empresa de aseo y, en sus tiempos libres, trabajan en Amazon Flex; tienen un hijo de 7 años. Ambos obtuvieron ingresos acumulados por $50,000 USD.\n\nSe les aplicó el crédito por trabajo, ya que sus ingresos no superaron los $53,000 USD al año, y también el crédito tributario por hijo menor de 17 años; en total obtuvieron un reembolso de $6,800 USD.",
+  image: testimonioEstebanMaria,
   client: "Esteban y María"
 },
 {
